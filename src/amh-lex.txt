@@ -1,0 +1,35 @@
+Multichar_Symbols
+^[ ^] +3P +Masc +Fem
++Sg +Act +Pass +FormI +FormIII
+
+LEXICON Root
+LBound ;
+
+LEXICON LBound
+[:^[{ Roots ;
+
+LEXICON Roots
+ktb MergeRight ;
+drs MergeRight ;
+bsl MergeRight ;
+
+LEXICON MergeRight
+0:}.m%>.{ Template ; ! % literalizes the >
+
+LEXICON Template
++FormI:CVCVC MergeLeft ;
++FormIII:CVVCVC MergeLeft ;
+
+LEXICON MergeLeft
+0:}.%<m. Vocalization ; ! % literalizes the <
+
+LEXICON Vocalization
++Act:[a+] RBound ;
++Pass:[u*i] RBound ;
+
+LEXICON RBound
+]:^] PerfEnd ;
+
+LEXICON PerfEnd
++3P+Masc+Sg:a # ;
++3P+Fem+Sg:at # ;
