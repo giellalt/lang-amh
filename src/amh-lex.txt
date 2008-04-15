@@ -9,9 +9,9 @@ LEXICON LBound
 [:^[{ Roots ;
 
 LEXICON Roots
-ktb MergeRight ;
+lbs MergeRight ;
 drs MergeRight ;
-bsl MergeRight ;
+ktb MergeRight ;
 
 LEXICON MergeRight
 0:}.m%>.{ Template ; ! % literalizes the >
