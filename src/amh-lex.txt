@@ -1,12 +1,11 @@
-﻿
-Multichar_Symbols	 ^[ ^] +3P +Masc +Fem +Sg  +perfective +imperfective +gerund +infinitive
-		    +1p +2p  +pl +nominal +fut +gen
+﻿Multichar_Symbols	 ^[ ^]  +3P  +Masc  +Fem  +Sg   +perfective    +imperfective   +gerund    +infinitive
+		    +1P +2P  +Pl +nominal +fut +gen
 
 
     	            	      !Here I will take the roots and all the process independently, for each form
-LEXICON Root 	  	      !the weakness of this analysis is that it is not economical since the roots will be reduplicated to every form
+LEXICON Root 	  	      !the weakness of this analysis is that it is not economical since the roots will be reduPlicated to every form
 
-!	Pre ;		      !the prefix creats a problem with the roots and the whole map, i will insert them by replace rules
+!	Pre ;		      !the prefix creats a problem with the roots and the whole map, i will insert them by rePlace rules
 	LBoundp;
 	LBoundi;
 	LBoundg;
@@ -17,8 +16,8 @@ LEXICON Root 	  	      !the weakness of this analysis is that it is not economic
 
 !..........................................................................................................................................................
 
-LEXICON LBoundp	!<---------Perfective forms
-[:^[{ Rootsp ;
+LEXICON LBoundp		
+[:^[{  Rootsp ;
 
 LEXICON Rootsp
 lbs MergeRightp ;
@@ -26,9 +25,9 @@ drs MergeRightp ;
 ktb MergeRightp ;
 
 LEXICON MergeRightp
-0:}.m%>.{ Templatep ; 
+0:}.m%>.{ TemPlatep ; 
 
-LEXICON Templatep
+LEXICON TemPlatep
 +pefective:CVCVC MergeLeftp;
 
 LEXICON MergeLeftp
@@ -41,13 +40,13 @@ LEXICON RBoundp
 ]:^] Endp ;
 
 LEXICON Endp
-+3p+masc+sg:ä	#;
-+3p+fem+sg:äč	#;
-+3p+pl:u	#;
-+2p+masc+sg:h	#;	! h alternates with k
-2p+fem+sg:š	#;
-2p+pl:ačhu	#;
-+1p+sg:hu	#;	!hu alternates with ku
++3p+Masc+Sg:ä	#;
++3p+Fem+Sg:äč	#;
++3p+Pl:u	#;
++2P+Masc+Sg:h	#;	! h alternates with k
+2P+Fem+Sg:š	#;
+2P+Pl:ačhu	#;
++1P+Sg:hu	#;	!hu alternates with ku
 
 !..........................................................................................................................................................
 
@@ -60,9 +59,9 @@ drs MergeRighti ;
 ktb MergeRighti ;
 
 LEXICON MergeRighti
-0:}.m%>.{ Templatei ; 
+0:}.m%>.{ TemPlatei ; 
 
-LEXICON Templatei
+LEXICON TemPlatei
 +imperfective:CVCCV MergeLefti ;
 
 LEXICON MergeLefti
@@ -75,28 +74,28 @@ LEXICON RBoundi
 ]:^] Endi ;
 
 LEXICON Endi
-+3p+masc+sg:al		#;
-+3p+fem+sg:aläč		#;
-+3p+pl:alu		#;
-+2p+masc+sg:aläh	#;	
-2p+fem+sg:aläš		#;
-2p+pl:alačhu		#;
-+1p+sg:alhu		#;
++3p+Masc+Sg:al		#;
++3p+Fem+Sg:aläč		#;
++3p+Pl:alu		#;
++2P+Masc+Sg:aläh	#;	
+2P+Fem+Sg:aläš		#;
+2P+Pl:alačhu		#;
++1P+Sg:alhu		#;
 
 !..........................................................................................................................................................
 
 LEXICON LBoundg !<-------gerund forms
-[:^[{ Rootsg ;
+[:^[{ RootSg ;
 
-LEXICON Rootsg
+LEXICON RootSg
 lbs MergeRightg ;
 drs MergeRightg ;
 ktb MergeRightg ;
 
 LEXICON MergeRightg
-0:}.m%>.{ Templateg ; 
+0:}.m%>.{ TemPlateg ; 
 
-LEXICON Templateg
+LEXICON TemPlateg
 +gerund:CVCC MergeLeftg;
 
 LEXICON MergeLeftg
@@ -109,13 +108,13 @@ LEXICON RBoundg
 ]:^] Endg;
 
 LEXICON Endg
-+3p+masc+sg:o	#;
-+3p+fem+sg:a	#;
-+3p+pl:äw	#;
-+2p+masc+sg:äh  #;	
-2p+fem+sg:äš	#;
-2p+pl:ačhu	#;	!there is a phonological process here
-+1p+sg:e	#;
++3p+Masc+Sg:o	#;
++3p+Fem+Sg:a	#;
++3p+Pl:äw	#;
++2P+Masc+Sg:äh  #;	
+2P+Fem+Sg:äš	#;
+2P+Pl:ačhu	#;	!there is a phonological process here
++1P+Sg:e	#;
 
 !..........................................................................................................................................................
 
@@ -128,9 +127,9 @@ drs MergeRightin ;
 ktb MergeRightin ;
 
 LEXICON MergeRightin
-0:}.m%>.{ Templatein ; 
+0:}.m%>.{ TemPlatein ; 
 
-LEXICON Templatein
+LEXICON TemPlatein
 +infinitive:CVCVC MergeLeftin;
 
 LEXICON MergeLeftin
