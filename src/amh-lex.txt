@@ -1,35 +1,147 @@
-﻿Multichar_Symbols
-^[ ^] +3P +Masc +Fem
-+Sg +Act +Pass +FormI +FormIII
+﻿
+Multichar_Symbols	 ^[ ^] +3P +Masc +Fem +Sg  +perfective +imperfective +gerund +infinitive
+		    +1p +2p  +pl +nominal +fut +gen
 
-LEXICON Root
-LBound ;
 
-LEXICON LBound
-[:^[{ Roots ;
+    	            	      !Here I will take the roots and all the process independently, for each form
+LEXICON Root 	  	      !the weakness of this analysis is that it is not economical since the roots will be reduplicated to every form
 
-LEXICON Roots
-lbs MergeRight ;
-drs MergeRight ;
-ktb MergeRight ;
+!	Pre ;		      !the prefix creats a problem with the roots and the whole map, i will insert them by replace rules
+	LBoundp;
+	LBoundi;
+	LBoundg;
+	LBoundin;|	
+!LEXICON pre
+!yi	imperfective;
+!mä 	infinitive;
 
-LEXICON MergeRight
-0:}.m%>.{ Template ; ! % literalizes the >
+!..........................................................................................................................................................
 
-LEXICON Template
-+FormI:CVCVC MergeLeft ;
-+FormIII:CVVCVC MergeLeft ;
+LEXICON LBoundp	!<---------Perfective forms
+[:^[{ Rootsp ;
 
-LEXICON MergeLeft
-0:}.%<m. Vocalization ; ! % literalizes the <
+LEXICON Rootsp
+lbs MergeRightp ;
+drs MergeRightp ;
+ktb MergeRightp ;
 
-LEXICON Vocalization
-+Act:[a+] RBound ;
-+Pass:[u*i] RBound ;
+LEXICON MergeRightp
+0:}.m%>.{ Templatep ; 
 
-LEXICON RBound
-]:^] PerfEnd ;
+LEXICON Templatep
++pefective:CVCVC MergeLeftp;
 
-LEXICON PerfEnd
-+3P+Masc+Sg:a # ;
-+3P+Fem+Sg:at # ;
+LEXICON MergeLeftp
+0:}.%<m. Vocalizationp ; 
+
+LEXICON Vocalizationp
++perf:[ä+] RBoundp ;
+
+LEXICON RBoundp
+]:^] Endp ;
+
+LEXICON Endp
++3p+masc+sg:ä	#;
++3p+fem+sg:äč	#;
++3p+pl:u	#;
++2p+masc+sg:h	#;	! h alternates with k
+2p+fem+sg:š	#;
+2p+pl:ačhu	#;
++1p+sg:hu	#;	!hu alternates with ku
+
+!..........................................................................................................................................................
+
+LEXICON LBoundi !<-------Imperfective forms
+[:^[{ Rootsi ;
+
+LEXICON Rootsi
+lbs MergeRighti ;
+drs MergeRighti ;
+ktb MergeRighti ;
+
+LEXICON MergeRighti
+0:}.m%>.{ Templatei ; 
+
+LEXICON Templatei
++imperfective:CVCCV MergeLefti ;
+
+LEXICON MergeLefti
+0:}.%<m. Vocalizationi ; 
+
+LEXICON Vocalizationi
++fut:[ä*a] RBoundi ;
+
+LEXICON RBoundi
+]:^] Endi ;
+
+LEXICON Endi
++3p+masc+sg:al		#;
++3p+fem+sg:aläč		#;
++3p+pl:alu		#;
++2p+masc+sg:aläh	#;	
+2p+fem+sg:aläš		#;
+2p+pl:alačhu		#;
++1p+sg:alhu		#;
+
+!..........................................................................................................................................................
+
+LEXICON LBoundg !<-------gerund forms
+[:^[{ Rootsg ;
+
+LEXICON Rootsg
+lbs MergeRightg ;
+drs MergeRightg ;
+ktb MergeRightg ;
+
+LEXICON MergeRightg
+0:}.m%>.{ Templateg ; 
+
+LEXICON Templateg
++gerund:CVCC MergeLeftg;
+
+LEXICON MergeLeftg
+0:}.%<m. Vocalizationg; 
+
+LEXICON Vocalizationg
++ger:[ä] RBoundg ;
+
+LEXICON RBoundg
+]:^] Endg;
+
+LEXICON Endg
++3p+masc+sg:o	#;
++3p+fem+sg:a	#;
++3p+pl:äw	#;
++2p+masc+sg:äh  #;	
+2p+fem+sg:äš	#;
+2p+pl:ačhu	#;	!there is a phonological process here
++1p+sg:e	#;
+
+!..........................................................................................................................................................
+
+LEXICON LBoundin !<-------infinitival forms
+[:^[{ Rootsin ;
+
+LEXICON Rootsin
+lbs MergeRightin ;
+drs MergeRightin ;
+ktb MergeRightin ;
+
+LEXICON MergeRightin
+0:}.m%>.{ Templatein ; 
+
+LEXICON Templatein
++infinitive:CVCVC MergeLeftin;
+
+LEXICON MergeLeftin
+0:}.%<m. Vocalizationin; 
+
+
+LEXICON Vocalizationin
++inf:[ä] RBoundin;
+
+LEXICON RBoundin
+]:^] Endin;
+
+LEXICON Endin
++nominal:0	#;	
