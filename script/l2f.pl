@@ -5,9 +5,9 @@ while (<>)
 {
 # convert latin to fidel
 
-s/hä/ሀ/g ;
+s/ha/ሀ/g ;
 s/lä/ለ/g ;
-s/ḥä/ሐ/g ;
+s/ha/ሐ/g ;
 s/mä/መ/g ;
 s/śä/ሠ/g ;
 s/rä/ረ/g ;
@@ -64,11 +64,11 @@ s/yu/ዩ/g ;
 s/du/ዱ/g ;
 s/ǧu/ጁ/g ;
 s/gu/ጉ/g ;
-s/tu/ጡ/g ;
-s/ču/ጩ/g ;
-s/pu/ጱ/g ;
-s/su/ጹ/g ;
-s/su/ፁ/g ;
+s/t'u/ጡ/g ;#
+s/č'u/ጩ/g ;#
+s/p'u/ጱ/g ;#changed
+s/s'u/ጹ/g ;#
+s/su'/ፁ/g ;#
 s/fu/ፉ/g ;
 s/pu/ፑ/g ;
 s/hi/ሂ/g ;
@@ -97,11 +97,11 @@ s/yi/ዪ/g ;
 s/di/ዲ/g ;
 s/ǧi/ጂ/g ;
 s/gi/ጊ/g ;
-s/ti/ጢ/g ;
-s/či/ጪ/g ;
-s/pi/ጲ/g ;
-s/si/ጺ/g ;
-s/si/ፂ/g ;
+s/t'i/ጢ/g ;#
+s/č'i/ጪ/g ;#
+s/p'i/ጲ/g ; #change
+s/s'i/ጺ/g ; #change
+s/s'i/ፂ/g ;#
 s/fi/ፊ/g ;
 s/pi/ፒ/g ;
 s/ha/ሃ/g ;
@@ -130,11 +130,11 @@ s/ya/ያ/g ;
 s/da/ዳ/g ;
 s/ǧa/ጃ/g ;
 s/ga/ጋ/g ;
-s/ta/ጣ/g ;
-s/ča/ጫ/g ;
-s/pa/ጳ/g ;
-s/sa/ጻ/g ;
-s/sa/ፃ/g ;
+s/t'a/ጣ/g ;#
+s/č'a/ጫ/g ;#
+s/p'a/ጳ/g ;#
+s/s'a/ጻ/g ;#
+s/s'a/ፃ/g ;#
 s/fa/ፋ/g ;
 s/pa/ፓ/g ;
 s/he/ሄ/g ;
@@ -163,11 +163,11 @@ s/ye/ዬ/g ;
 s/de/ዴ/g ;
 s/ǧe/ጄ/g ;
 s/ge/ጌ/g ;
-s/te/ጤ/g ;
-s/če/ጬ/g ;
-s/pe/ጴ/g ;
-s/se/ጼ/g ;
-s/se/ፄ/g ;
+s/t'e/ጤ/g ;#
+s/č'e/ጬ/g ;#
+s/p'e/ጴ/g ;#
+s/s'e/ጼ/g ;#
+s/s'e/ፄ/g ;#
 s/fe/ፌ/g ;
 s/pe/ፔ/g ;
 s/hǝ/ህ/g ;
@@ -196,11 +196,11 @@ s/yǝ/ይ/g ;
 s/dǝ/ድ/g ;
 s/ǧǝ/ጅ/g ;
 s/gǝ/ግ/g ;
-s/tǝ/ጥ/g ;
-s/čǝ/ጭ/g ;
-s/pǝ/ጵ/g ;
-s/sǝ/ጽ/g ;
-s/sǝ/ፅ/g ;
+s/t'ǝ/ጥ/g ;#
+s/č'ǝ/ጭ/g ;#
+s/p'ǝ/ጵ/g ;#
+s/s'ǝ/ጽ/g ;#
+s/s'ǝ/ፅ/g ;#
 s/fǝ/ፍ/g ;
 s/pǝ/ፕ/g ;
 s/ho/ሆ/g ;
@@ -229,11 +229,11 @@ s/yo/ዮ/g ;
 s/do/ዶ/g ;
 s/ǧo/ጆ/g ;
 s/go/ጎ/g ;
-s/to/ጦ/g ;
-s/čo/ጮ/g ;
-s/po/ጶ/g ;
-s/so/ጾ/g ;
-s/so/ፆ/g ;
+s/t'o/ጦ/g ;#
+s/č'o/ጮ/g ;#
+s/p'o/ጶ/g ;#
+s/s'o/ጾ/g ;#
+s/s'o/ፆ/g ;#
 s/fo/ፎ/g ;
 s/po/ፖ/g ;
 
