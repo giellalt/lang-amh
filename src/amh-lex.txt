@@ -1,67 +1,42 @@
-﻿Multichar_Symbols	 ^[ ^]  +3P  +Masc  +Fem  +Sg   +perfective    +imperfective   +gerund    +infinitive
+﻿Multichar_Symbols ^[ ^] +3P +Masc +Fem
++Sg  +perfective    +imperfective   +gerund    +infinitive
 		    +1P +2P  +Pl +nominal +fut +gen
 
+!Here I will take the roots and all the process independently, for each form
 
-    	            	      !Here I will take the roots and all the process independently, for each form
-LEXICON Root 	  	      !the weakness of this analysis is that it is not economical since the roots will be reduPlicated to every form
+LEXICON Root	
+	Nominalizer;
+	Causative;
+		
+LEXICON Nominalizer
+me	Causativein;		
+	   
+LEXICON Causative   	    
+as     	 LBoundg;    
+as	LBoundp;	
+as	LBoundi;
+LEXICON Causativein
+as	LBoundin;
 
-!	Pre ;		      !the prefix creats a problem with the roots and the whole map, i will insert them by rePlace rules
-	LBoundp;
-	LBoundi;
-	LBoundg;
-	LBoundin;|	
-!LEXICON pre
-!yi	imperfective;
-!mä 	infinitive;
 
-!..........................................................................................................................................................
-
-LEXICON LBoundp		
-[:^[{  Rootsp ;
-
-LEXICON Rootsp
-lbs MergeRightp ;
-drs MergeRightp ;
-ktb MergeRightp ;
-
-LEXICON MergeRightp
-0:}.m%>.{ TemPlatep ; 
-
-LEXICON TemPlatep
-+pefective:CVCVC MergeLeftp;
-
-LEXICON MergeLeftp
-0:}.%<m. Vocalizationp ; 
-
-LEXICON Vocalizationp
-+perf:[ä+] RBoundp ;
-
-LEXICON RBoundp
-]:^] Endp ;
-
-LEXICON Endp
-+3p+Masc+Sg:ä	#;
-+3p+Fem+Sg:äč	#;
-+3p+Pl:u	#;
-+2P+Masc+Sg:h	#;	! h alternates with k
-2P+Fem+Sg:š	#;
-2P+Pl:ačhu	#;
-+1P+Sg:hu	#;	!hu alternates with ku
-
-!..........................................................................................................................................................
-
-LEXICON LBoundi !<-------Imperfective forms
+LEXICON LBoundi
 [:^[{ Rootsi ;
 
 LEXICON Rootsi
 lbs MergeRighti ;
 drs MergeRighti ;
-ktb MergeRighti ;
+gdl MergeRighti ;
+Ɂrs MergeRighti; 	!verbs that begin with 'a'(lost Ɂ at the begining)
+lkɁ  MergeRighti;	!verbs that lost 'Ɂ ' at the end
+sɁl MergeRighti;	!verbs that lost 'Ɂ' at the mid position
+mhl MergeRighti;	!verbs that lost 'h' at the mid
+frh MergeRighti;	!verbs that lost 'h' at the end,,, 
+
 
 LEXICON MergeRighti
-0:}.m%>.{ TemPlatei ; 
+0:}.m%>.{ Templatei ; 
 
-LEXICON TemPlatei
+LEXICON Templatei
 +imperfective:CVCCV MergeLefti ;
 
 LEXICON MergeLefti
@@ -74,28 +49,30 @@ LEXICON RBoundi
 ]:^] Endi ;
 
 LEXICON Endi
-+3p+Masc+Sg:al		#;
-+3p+Fem+Sg:aläč		#;
-+3p+Pl:alu		#;
-+2P+Masc+Sg:aläh	#;	
-2P+Fem+Sg:aläš		#;
-2P+Pl:alačhu		#;
-+1P+Sg:alhu		#;
++3p+masc+sg:al		#;
++3p+fem+sg:aläč		#;
++3p+pl:alu		#;
++2p+masc+sg:aläh	#;	
+2p+fem+sg:aläš		#;
+2p+pl:alačhu		#;
++1p+sg:alhu		#;
+LEXICON LBoundg
+[:^[{ Rootsg ;
 
-!..........................................................................................................................................................
-
-LEXICON LBoundg !<-------gerund forms
-[:^[{ RootSg ;
-
-LEXICON RootSg
-lbs MergeRightg ;
+LEXICON Rootsg
+lbs MergeRightg;
 drs MergeRightg ;
-ktb MergeRightg ;
+gdl MergeRightg;
+Ɂrs MergeRightg; 	 
+lkɁ  MergeRightg;	 
+sɁl MergeRightg;	 
+mhl MergeRightg;	 
+frh MergeRightg;	 
 
 LEXICON MergeRightg
-0:}.m%>.{ TemPlateg ; 
+0:}.m%>.{ Templateg ; 
 
-LEXICON TemPlateg
+LEXICON Templateg
 +gerund:CVCC MergeLeftg;
 
 LEXICON MergeLeftg
@@ -108,23 +85,63 @@ LEXICON RBoundg
 ]:^] Endg;
 
 LEXICON Endg
-+3p+Masc+Sg:o	#;
-+3p+Fem+Sg:a	#;
-+3p+Pl:äw	#;
-+2P+Masc+Sg:äh  #;	
-2P+Fem+Sg:äš	#;
-2P+Pl:ačhu	#;	!there is a phonological process here
-+1P+Sg:e	#;
++3p+masc+sg:o	#;
++3p+fem+sg:a	#;
++3p+pl:äw	#;
++2p+masc+sg:äh  #;	
+2p+fem+sg:äš	#;
+2p+pl:ačhu	#;	!there is a phonological process here
++1p+sg:e	#;
 
-!..........................................................................................................................................................
+LEXICON LBoundp
+[:^[{ Rootsp ;
 
-LEXICON LBoundin !<-------infinitival forms
+LEXICON Rootsp
+lbs MergeRightp;
+drs MergeRightp ;
+gdl MergeRightp;
+Ɂrs MergeRightp; 	 
+lkɁ  MergeRightp;	 
+sɁl MergeRightp;	 
+mhl MergeRightp;	 
+frh MergeRightp;	
+
+LEXICON MergeRightp
+0:}.m%>.{ Templatep ; 
+
+LEXICON Templatep
++pefective:CVCVC MergeLeftp;
+
+LEXICON MergeLeftp
+0:}.%<m. Vocalizationp ; 
+
+LEXICON Vocalizationp
++perf:[ä+] RBoundp ;
+
+LEXICON RBoundp
+]:^] Endp ;
+
+LEXICON Endp
++3p+masc+sg:ä	#;
++3p+fem+sg:äč	#;
++3p+pl:u	#;
++2p+masc+sg:h	#;	! h alternates with k
+2p+fem+sg:š	#;
+2p+pl:ačhu	#;
++1p+sg:hu	#;	!hu alternates with ku
+
+LEXICON LBoundin			
 [:^[{ Rootsin ;
 
 LEXICON Rootsin
-lbs MergeRightin ;
-drs MergeRightin ;
-ktb MergeRightin ;
+lbs MergeRightin;
+drs MergeRightin;
+gdl MergeRightin;
+Ɂrs MergeRightin; 	 
+lkɁ  MergeRightin;	 
+sɁl MergeRightin;	 
+mhl MergeRightin;	 
+frh MergeRightin;	
 
 LEXICON MergeRightin
 0:}.m%>.{ TemPlatein ; 
