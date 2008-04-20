@@ -1,4 +1,4 @@
-﻿Multichar_Symbols ^[ ^] +3P +Masc +Fem
+﻿Multichat_Symbols  ^[ ^] +3P +Masc +Fem
 +Sg  +perfective    +imperfective   +gerund    +infinitive
 		    +1P +2P  +Pl +nominal +fut +gen
 
@@ -9,7 +9,7 @@ LEXICON Root
 	Causative;
 		
 LEXICON Nominalizer
-me	Causativein;		
+mä	Causativein;		
 	   
 LEXICON Causative   	    
 as     	 LBoundg;    
