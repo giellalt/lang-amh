@@ -1,72 +1,36 @@
-﻿Multichat_Symbols  ^[ ^] +3P +Masc +Fem
+﻿Multichar_Symbols ^[ ^] +3P +Masc +Fem
 +Sg  +perfective    +imperfective   +gerund    +infinitive
 		    +1P +2P  +Pl +nominal +fut +gen
 
-!Here I will take the roots and all the process independently, for each form
-
-LEXICON Root	
+LEXICON Root
 	Nominalizer;
 	Causative;
 		
 LEXICON Nominalizer
-mä	Causativein;		
+me	Causativein;		
 	   
 LEXICON Causative   	    
-as     	 LBoundg;    
-as	LBoundp;	
-as	LBoundi;
+ as	LBoundp;	
+ 	LBoundg;
+	Reduplg;
+	Reduplp;
+	
 LEXICON Causativein
 as	LBoundin;
+	Reduplin;
 
-
-LEXICON LBoundi
-[:^[{ Rootsi ;
-
-LEXICON Rootsi
-lbs MergeRighti ;
-drs MergeRighti ;
-gdl MergeRighti ;
-Ɂrs MergeRighti; 	!verbs that begin with 'a'(lost Ɂ at the begining)
-lkɁ  MergeRighti;	!verbs that lost 'Ɂ ' at the end
-sɁl MergeRighti;	!verbs that lost 'Ɂ' at the mid position
-mhl MergeRighti;	!verbs that lost 'h' at the mid
-frh MergeRighti;	!verbs that lost 'h' at the end,,, 
-
-
-LEXICON MergeRighti
-0:}.m%>.{ Templatei ; 
-
-LEXICON Templatei
-+imperfective:CVCCV MergeLefti ;
-
-LEXICON MergeLefti
-0:}.%<m. Vocalizationi ; 
-
-LEXICON Vocalizationi
-+fut:[ä*a] RBoundi ;
-
-LEXICON RBoundi
-]:^] Endi ;
-
-LEXICON Endi
-+3p+masc+sg:al		#;
-+3p+fem+sg:aläč		#;
-+3p+pl:alu		#;
-+2p+masc+sg:aläh	#;	
-2p+fem+sg:aläš		#;
-2p+pl:alačhu		#;
-+1p+sg:alhu		#;
 LEXICON LBoundg
-[:^[{ Rootsg ;
+[:^[{  Rootsg;
+
 
 LEXICON Rootsg
-lbs MergeRightg;
+lbs MergeRightg ;
 drs MergeRightg ;
 gdl MergeRightg;
-Ɂrs MergeRightg; 	 
-lkɁ  MergeRightg;	 
-sɁl MergeRightg;	 
-mhl MergeRightg;	 
+Xrs MergeRightg; 	
+lkX MergeRightg;	
+sXl MergeRightg;	
+mhl MergeRightg;	
 frh MergeRightg;	 
 
 LEXICON MergeRightg
@@ -79,32 +43,43 @@ LEXICON MergeLeftg
 0:}.%<m. Vocalizationg; 
 
 LEXICON Vocalizationg
-+ger:[ä] RBoundg ;
++ger:[e] RBoundg ;
 
 LEXICON RBoundg
-]:^] Endg;
+]:^]         	Endg;
+	 
+LEXICON Reduplg
+0:^[{ Rrootsg ;
+
+LEXICON Rrootsg
+lem	boundg;
+nek'	boundg;
+fek'	boundg;
+
+LEXICON boundg
+0:}^2^]  Endg;
 
 LEXICON Endg
 +3p+masc+sg:o	#;
 +3p+fem+sg:a	#;
-+3p+pl:äw	#;
-+2p+masc+sg:äh  #;	
-2p+fem+sg:äš	#;
-2p+pl:ačhu	#;	!there is a phonological process here
++3p+pl:ew	#;
++2p+masc+sg:eh  #;	
++2p+fem+sg:es'	#;
++2p+pl:ac'hu	#;	!there is a phonological process here
 +1p+sg:e	#;
 
 LEXICON LBoundp
 [:^[{ Rootsp ;
 
 LEXICON Rootsp
-lbs MergeRightp;
+lbs MergeRightp ;
 drs MergeRightp ;
 gdl MergeRightp;
-Ɂrs MergeRightp; 	 
-lkɁ  MergeRightp;	 
-sɁl MergeRightp;	 
-mhl MergeRightp;	 
-frh MergeRightp;	
+Xrs MergeRightp; 	
+lkX MergeRightp;	
+sXl MergeRightp;	
+mhl MergeRightp;	
+frh MergeRightp;
 
 LEXICON MergeRightp
 0:}.m%>.{ Templatep ; 
@@ -116,32 +91,44 @@ LEXICON MergeLeftp
 0:}.%<m. Vocalizationp ; 
 
 LEXICON Vocalizationp
-+perf:[ä+] RBoundp ;
++perf:[e+] RBoundp ;
 
 LEXICON RBoundp
-]:^] Endp ;
+]:^]  Subjp ;
+	 
+LEXICON Reduplp
+0:^[{ Rrootsp ;
 
-LEXICON Endp
-+3p+masc+sg:ä	#;
-+3p+fem+sg:äč	#;
+LEXICON Rrootsp
+lem	boundp;
+nek'	boundp;
+fek'	boundp;
+
+LEXICON boundp
+0:}^2^]  Subjp;
+
+LEXICON Subjp
++3p+masc+sg:e	#;
++3p+fem+sg:ec'	#;
 +3p+pl:u	#;
 +2p+masc+sg:h	#;	! h alternates with k
-2p+fem+sg:š	#;
-2p+pl:ačhu	#;
+2p+fem+sg:s'	#;
+2p+pl:ac'hu	#;
 +1p+sg:hu	#;	!hu alternates with ku
++1p+pl:en	#;                        !  gedelennn .........1st person act on 1st person; second person act on second person
 
 LEXICON LBoundin			
 [:^[{ Rootsin ;
 
 LEXICON Rootsin
-lbs MergeRightin;
+lbs MergeRightin ;
 drs MergeRightin;
 gdl MergeRightin;
-Ɂrs MergeRightin; 	 
-lkɁ  MergeRightin;	 
-sɁl MergeRightin;	 
-mhl MergeRightin;	 
-frh MergeRightin;	
+Xrs MergeRightin; 	
+lkX MergeRightin;	
+sXl MergeRightin;	
+mhl MergeRightin;	
+frh MergeRightin;
 
 LEXICON MergeRightin
 0:}.m%>.{ TemPlatein ; 
@@ -154,10 +141,21 @@ LEXICON MergeLeftin
 
 
 LEXICON Vocalizationin
-+inf:[ä] RBoundin;
++inf:[e+] RBoundin;
 
 LEXICON RBoundin
-]:^] Endin;
+]:^] 	Endin;
+
+LEXICON Reduplin
+0:^[{ Rrootsin ;
+
+LEXICON Rrootsin
+lem	boundin;
+nek'	boundin;
+fek'	boundin;
+
+LEXICON boundin
+0:}^2^]  Endin;
 
 LEXICON Endin
 +nominal:0	#;	
