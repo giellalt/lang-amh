@@ -1,0 +1,37 @@
+echo << We define vowels >>
+
+define Vw [ a | e | i | o | u | y | ä | ë | ï | ö | ü ] ;
+
+echo << We define rules >>
+
+define h0 h -> 0 || Vw _ Vw ;
+define ht h -> t || _ o ;
+define äa ä -> a || X _ ;
+define X0 X -> 0 || _ Vw , Vw_ ;
+define iy i -> y || Vw _ ;
+define uw u -> w || Vw_ ;
+define ow o -> w || Vw_ ;
+define a1 ä ä -> a ;
+define a2 ä a -> a ;
+define a3 a ä -> a ;  
+define a4 a a -> a ; 
+define sä s -> ä || _ e.#. ;
+define tc t -> č || _ e.#. ;  
+
+echo << We read the regular expressions >>
+read regex [
+h0
+.o. ht
+.o. äa
+.o. X0
+.o. iy
+.o. uw
+.o. ow
+.o. a1
+.o. a2
+.o. a3
+.o. a4
+.o. sä
+.o. tc]; 
+
+!!! damn characters are disturbing me,,, where can I find č in -utf8 form?? XFST says it is an illegal character
