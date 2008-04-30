@@ -4,70 +4,70 @@ Multichar_Symbols
 		    +1P +2P  +Pl +nominal +fut +gen
 
 LEXICON Root
-	Nominalizer;
-	Causative;
+	Nominalizer ;
+	Causative ;
 		
 LEXICON Nominalizer
-me	Causativein;		
+me	Causativein ;		
 	   
 LEXICON Causative   	    
- as	LBoundp;	
- 	LBoundg;
-	Reduplg;
-	Reduplp;
+ as	LBoundp ;	
+ 	LBoundg ;
+	Reduplg ;
+	Reduplp ;
 	
 LEXICON Causativein
-as	LBoundin;
-	Reduplin;
+as	LBoundin ;
+	Reduplin ;
 
 LEXICON LBoundg
-[:^[{  Rootsg;
+[:^[{  Rootsg ;
 
 
 LEXICON Rootsg
 lbs MergeRightg ;
 drs MergeRightg ;
-gdl MergeRightg;
-Xrs MergeRightg; 	
-lkX MergeRightg;	
-sXl MergeRightg;	
-mhl MergeRightg;	
-frh MergeRightg;	 
+gdl MergeRightg ;
+Xrs MergeRightg ; 	
+lkX MergeRightg ;	
+sXl MergeRightg ;	
+mhl MergeRightg ;	
+frh MergeRightg ;	 
 
 LEXICON MergeRightg
 0:}.m%>.{ Templateg ; 
 
 LEXICON Templateg
-+gerund:CVCC MergeLeftg;
++gerund:CVCC MergeLeftg ;
 
 LEXICON MergeLeftg
-0:}.%<m. Vocalizationg; 
+0:}.%<m. Vocalizationg ; 
 
 LEXICON Vocalizationg
 +ger:[e] RBoundg ;
 
 LEXICON RBoundg
-]:^]         	Endg;
+]:^]         	Endg ;
 	 
 LEXICON Reduplg
 0:^[{ Rrootsg ;
 
 LEXICON Rrootsg
-lem	boundg;
-nek'	boundg;
-fek'	boundg;
+lem	boundg ;
+nek'	boundg ;
+fek'	boundg ;
 
 LEXICON boundg
-0:}^2^]  Endg;
+0:}^2^]  Endg ;
 
 LEXICON Endg
-+3p+masc+sg:o	#;
-+3p+fem+sg:a	#;
-+3p+pl:ew	#;
-+2p+masc+sg:eh  #;	
-+2p+fem+sg:es'	#;
-+2p+pl:ac'hu	#;	!there is a phonological process here
-+1p+sg:e	#;
++3p+masc+sg:o	# ;
++3p+fem+sg:a	# ;
++3p+pl:ew	# ;
++2p+masc+sg:eh  # ;	
++2p+fem+sg:es'	# ;
++2p+pl:ac'hu	# ;	!there is a phonological process here
++1p+sg:e	# ;
 
 LEXICON LBoundp
 [:^[{ Rootsp ;
@@ -75,18 +75,18 @@ LEXICON LBoundp
 LEXICON Rootsp
 lbs MergeRightp ;
 drs MergeRightp ;
-gdl MergeRightp;
-Xrs MergeRightp; 	
-lkX MergeRightp;	
-sXl MergeRightp;	
-mhl MergeRightp;	
-frh MergeRightp;
+gdl MergeRightp ;
+Xrs MergeRightp ; 	
+lkX MergeRightp ;	
+sXl MergeRightp ;	
+mhl MergeRightp ;	
+frh MergeRightp ;
 
 LEXICON MergeRightp
 0:}.m%>.{ Templatep ; 
 
 LEXICON Templatep
-+pefective:CVCVC MergeLeftp;
++pefective:CVCVC MergeLeftp ;
 
 LEXICON MergeLeftp
 0:}.%<m. Vocalizationp ; 
@@ -101,64 +101,64 @@ LEXICON Reduplp
 0:^[{ Rrootsp ;
 
 LEXICON Rrootsp
-lem	boundp;
-nek'	boundp;
-fek'	boundp;
+lem	boundp ;
+nek'	boundp ;
+fek'	boundp ;
 
 LEXICON boundp
-0:}^2^]  Subjp;
+0:}^2^]  Subjp ;
 
 LEXICON Subjp
-+3p+masc+sg:e	#;
-+3p+fem+sg:ec'	#;
-+3p+pl:u	#;
-+2p+masc+sg:h	#;	! h alternates with k
-2p+fem+sg:s'	#;
-2p+pl:ac'hu	#;
-+1p+sg:hu	#;	! hu alternates with ku
-+1p+pl:en	#;      !  gedelennn .........1st person act on 1st person; second person act on second person
++3p+masc+sg:e	# ;
++3p+fem+sg:ec'	# ;
++3p+pl:u	# ;
++2p+masc+sg:h	# ;	! h alternates with k
+2p+fem+sg:s'	# ;
+2p+pl:ac'hu	# ;
++1p+sg:hu	# ;	! hu alternates with ku
++1p+pl:en	# ;      !  gedelennn .........1st person act on 1st person ; second person act on second person
 
 LEXICON LBoundin			
 [:^[{ Rootsin ;
 
 LEXICON Rootsin
 lbs MergeRightin ;
-drs MergeRightin;
-gdl MergeRightin;
-Xrs MergeRightin; 	
-lkX MergeRightin;	
-sXl MergeRightin;	
-mhl MergeRightin;	
-frh MergeRightin;
+drs MergeRightin ;
+gdl MergeRightin ;
+Xrs MergeRightin ; 	
+lkX MergeRightin ;	
+sXl MergeRightin ;	
+mhl MergeRightin ;	
+frh MergeRightin ;
 
 LEXICON MergeRightin
 0:}.m%>.{ TemPlatein ; 
 
 LEXICON TemPlatein
-+infinitive:CVCVC MergeLeftin;
++infinitive:CVCVC MergeLeftin ;
 
 LEXICON MergeLeftin
-0:}.%<m. Vocalizationin; 
+0:}.%<m. Vocalizationin ; 
 
 
 LEXICON Vocalizationin
-+inf:[e+] RBoundin;
++inf:[e+] RBoundin ;
 
 LEXICON RBoundin
-]:^] 	Endin;
+]:^] 	Endin ;
 
 LEXICON Reduplin
 0:^[{ Rrootsin ;
 
 LEXICON Rrootsin
-lem	boundin;
-nek'	boundin;
-fek'	boundin;
+lem	boundin ;
+nek'	boundin ;
+fek'	boundin ;
 
 LEXICON boundin
-0:}^2^]  Endin;
+0:}^2^]  Endin ;
 
 LEXICON Endin
-+nominal:0	#;	
++nominal:0	# ;	
 
 
