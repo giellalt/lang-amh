@@ -31,11 +31,11 @@ s/yä/የ/g ;
 s/dä/ደ/g ;
 s/ǧä/ጀ/g ;
 s/gä/ገ/g ;
-s/t'ä/ጠ/g ; # Check '
-s/č'ä/ጨ/g ;
-s/p'ä/ጰ/g ;
-s/s'ä/ጸ/g ;
-s/s'ä/ፀ/g ;
+s/ťä/ጠ/g ; # Check '
+s/ćä/ጨ/g ;
+s/ṕä/ጰ/g ;
+s/śä/ጸ/g ;
+s/śä/ፀ/g ;
 s/fä/ፈ/g ;
 s/pä/ፐ/g ;
 s/hu/ሁ/g ;
@@ -64,10 +64,10 @@ s/yu/ዩ/g ;
 s/du/ዱ/g ;
 s/ǧu/ጁ/g ;
 s/gu/ጉ/g ;
-s/t'u/ጡ/g ;#
-s/č'u/ጩ/g ;#
-s/p'u/ጱ/g ;#changed
-s/s'u/ጹ/g ;#
+s/ťu/ጡ/g ;#
+s/ću/ጩ/g ;#
+s/ṕu/ጱ/g ;#changed
+s/śu/ጹ/g ;#
 s/su'/ፁ/g ;#
 s/fu/ፉ/g ;
 s/pu/ፑ/g ;
@@ -97,11 +97,11 @@ s/yi/ዪ/g ;
 s/di/ዲ/g ;
 s/ǧi/ጂ/g ;
 s/gi/ጊ/g ;
-s/t'i/ጢ/g ;#
-s/č'i/ጪ/g ;#
-s/p'i/ጲ/g ; #change
-s/s'i/ጺ/g ; #change
-s/s'i/ፂ/g ;#
+s/ťi/ጢ/g ;#
+s/ći/ጪ/g ;#
+s/ṕi/ጲ/g ; #change
+s/śi/ጺ/g ; #change
+s/śi/ፂ/g ;#
 s/fi/ፊ/g ;
 s/pi/ፒ/g ;
 s/ha/ሃ/g ;
@@ -130,11 +130,11 @@ s/ya/ያ/g ;
 s/da/ዳ/g ;
 s/ǧa/ጃ/g ;
 s/ga/ጋ/g ;
-s/t'a/ጣ/g ;#
-s/č'a/ጫ/g ;#
-s/p'a/ጳ/g ;#
-s/s'a/ጻ/g ;#
-s/s'a/ፃ/g ;#
+s/ťa/ጣ/g ;#
+s/ća/ጫ/g ;#
+s/ṕa/ጳ/g ;#
+s/śa/ጻ/g ;#
+s/śa/ፃ/g ;#
 s/fa/ፋ/g ;
 s/pa/ፓ/g ;
 s/he/ሄ/g ;
@@ -163,11 +163,11 @@ s/ye/ዬ/g ;
 s/de/ዴ/g ;
 s/ǧe/ጄ/g ;
 s/ge/ጌ/g ;
-s/t'e/ጤ/g ;#
-s/č'e/ጬ/g ;#
-s/p'e/ጴ/g ;#
-s/s'e/ጼ/g ;#
-s/s'e/ፄ/g ;#
+s/ťe/ጤ/g ;#
+s/će/ጬ/g ;# ć for caron and acute
+s/ṕe/ጴ/g ; 
+s/śe/ጼ/g ; # note these are identical
+s/śe/ፄ/g ; #
 s/fe/ፌ/g ;
 s/pe/ፔ/g ;
 s/hǝ/ህ/g ;
@@ -196,11 +196,11 @@ s/yǝ/ይ/g ;
 s/dǝ/ድ/g ;
 s/ǧǝ/ጅ/g ;
 s/gǝ/ግ/g ;
-s/t'ǝ/ጥ/g ;#
-s/č'ǝ/ጭ/g ;#
-s/p'ǝ/ጵ/g ;#
-s/s'ǝ/ጽ/g ;#
-s/s'ǝ/ፅ/g ;#
+s/ťǝ/ጥ/g ;#
+s/ćǝ/ጭ/g ;#
+s/ṕǝ/ጵ/g ;#
+s/śǝ/ጽ/g ;#
+s/śǝ/ፅ/g ;#
 s/fǝ/ፍ/g ;
 s/pǝ/ፕ/g ;
 s/ho/ሆ/g ;
@@ -229,11 +229,11 @@ s/yo/ዮ/g ;
 s/do/ዶ/g ;
 s/ǧo/ጆ/g ;
 s/go/ጎ/g ;
-s/t'o/ጦ/g ;#
-s/č'o/ጮ/g ;#
-s/p'o/ጶ/g ;#
-s/s'o/ጾ/g ;#
-s/s'o/ፆ/g ;#
+s/ťo/ጦ/g ;#
+s/ćo/ጮ/g ;#
+s/ṕo/ጶ/g ;#
+s/śo/ጾ/g ;#
+s/śo/ፆ/g ;#
 s/fo/ፎ/g ;
 s/po/ፖ/g ;
 
