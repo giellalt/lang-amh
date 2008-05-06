@@ -2,167 +2,132 @@
 ! Amharic morphology file
 ! ======================= !
 
-Multichar_Symbols
- ^[ ^] +3P +Masc +Fem
+Multichar_Symbols ^[ ^] +3P +Masc +Fem
 +Sg  +perfective    +imperfective   +gerund    +infinitive
 		    +1P +2P  +Pl +nominal +fut +gen
-
+ @U.verb.Im@  @U.verb.Nmn@   @U.verb.Im@    @U.verb.Perf@   @U.verb.Nmn@
+@U.verb.Ger@ @U.verb.Perf@     @U.imp.Im@ 
 LEXICON Root
-	Nominalizer ;
-	Causative ;
+	FutPerf;	
+	Nominalizer;
+	Causative;
 		
+LEXICON FutPerf
+<y? "+3P":0 "+Sg":0 "+Masc":0 "@U.verb.3msp@">	Ca;   
+<t? "+3P":0 "+Sg":0 "+Fem":0 "@U.verb.3fsp@" >	Ca;
+<y? "+3P":0 "+Pl":0 "@U.verb.3Pp@">		Ca;
+<t? "+2P":0 "@U.verb.2Pp@">		Ca;
+<X? "+1P":0 "@U.verb.1Psp@">		Ca;  !this is difficult to write,,,,the 6th letter
+<X?n "+1P":0 "@U.verb.1Pp@">		Ca;
+
+LEXICON Ca
+@U.imp.Im@  Causative;    ! the causative caused the imperfect prefixes to be optional 					!which is bad
+
 LEXICON Nominalizer
-me	Causativein ;		
+m‰@U.verb.Nmn@	Causative;		
 	   
+
 LEXICON Causative   	    
- as	LBoundp ;	
- 	LBoundg ;
-	Reduplg ;
-	Reduplp ;
-	
-LEXICON Causativein
-as	LBoundin ;
-	Reduplin ;
+as      LBound;
+		LBound;  
+as		LBoundf;
+		LBoundf;
+		
+LEXICON LBoundf
+[:^[{ Rootsf;
 
-LEXICON LBoundg
-[:^[{  Rootsg ;
+LEXICON Rootsf
+c'kc'k 	RightMerg;  !Z=c',,hehehhe, I have no good symbol
+mnzr	RightMerg;
+ 
+LEXICON RightMerg
+0:}.m%>.{ Templatef ; 
 
+LEXICON Templatef
+C‰C‰CC@U.verb.Im@  	RBoundf;	 
+C‰C‰C‰C@U.verb.Perf@	RBoundf;
+C‰CCC@U.verb.Ger@	RBoundf; 
+C‰CC‰C@U.verb.Nmn@	RBoundf ;
+LEXICON RBoundf
+]:}^] 	All;
+				 				
+LEXICON LBound
+[:^[{ Roots;
 
-LEXICON Rootsg
-lbs MergeRightg ;
-drs MergeRightg ;
-gdl MergeRightg ;
-Xrs MergeRightg ; 	
-lkX MergeRightg ;	
-sXl MergeRightg ;	
-mhl MergeRightg ;	
-frh MergeRightg ;	 
+LEXICON Roots
+lbs MergeRight ;
+drs MergeRight ;
+gdl MergeRight ;
+Xrs MergeRight; 	!verbs that begin with 'a'(lost X at the begining)
+lkX MergeRight;	!verbs that lost 'X' at the end
+sXl MergeRight;	!verbs that lost 'X' at the mid position
+mhl MergeRight;	!verbs that lost 'h' at the mid
+frh MergeRight;	!verbs that lost 'h' at the end,,, 
 
-LEXICON MergeRightg
-0:}.m%>.{ Templateg ; 
+LEXICON MergeRight
+0:}.m%>.{ Template ; 
 
-LEXICON Templateg
-+gerund:CVCC MergeLeftg ;
+LEXICON Template
+C‰CC@U.imp.Im@ 	RBound;	
+C‰C‰C@U.verb.Perf@	RBound;
+C‰CC@U.verb.Ger@		RBound; !the ‰ is an underlying form, i
+C‰C‰C@U.verb.Nmn@	RBound ;!t appears as a when there is consonant deletion
 
-LEXICON MergeLeftg
-0:}.%<m. Vocalizationg ; 
+LEXICON RBound
+]:}^] 	All;
 
-LEXICON Vocalizationg
-+ger:[e] RBoundg ;
+LEXICON All
+	Imperfect ;
+	Gersubject;
+	Persubject;
+	Infinitive;
+	  
+LEXICON Imperfect
+@U.imp.Im@     Impsubject;
 
-LEXICON RBoundg
-]:^]         	Endg ;
-	 
-LEXICON Reduplg
-0:^[{ Rrootsg ;
+LEXICON  Impsubject
+<al "+3P":0 "+Sg":0 "+Masc":0 "@U.verb.3msp@">	#;   !problem
+<al‰c'? "+3P":0 "+Sg":0 "+Fem":0 "@U.verb.3fsp@" >		#;
+<alu "+1P":0 "@U.verb.1Pp@">		#;
+<al‰h? "+2P":0 "+Sg":0 "+Masc":0 "@U.verb.2Pp@">	#;	
+<al‰s'? "+2P":0 "+Fem":0 "+sg":0 "@U.verb.2Pp@">		#;
+<alac'hu "+2P":0 "+Pl":0 "@U.verb.2Pp@">		#;
+<al‰hu "+1P":0 "+Sg":0 "@U.verb.1Psp@">		#;
+<al‰n?  "+1P":0 "+Pl":0 "@U.verb.1Pp@">	   #;
+ 
 
-LEXICON Rrootsg
-lem	boundg ;
-nek'	boundg ;
-fek'	boundg ;
+LEXICON Gersubject
+@U.verb.Ger@  GSubject;
 
-LEXICON boundg
-0:}^2^]  Endg ;
+LEXICON GSubject
++3p+masc+sg:o	#;
++3p+fem+sg:a	#;
++3p+pl:‰w?	#;
++2p+masc+sg:‰h?  #;
++2p+fem+sg:‰s'?	#;
++2p+pl:ac'?hu	#;	!there might be a phonological process here, dialects
++1p+sg:e	#;
 
-LEXICON Endg
-+3p+masc+sg:o	# ;
-+3p+fem+sg:a	# ;
-+3p+pl:ew	# ;
-+2p+masc+sg:eh  # ;	
-+2p+fem+sg:es'	# ;
-+2p+pl:ac'hu	# ;	!there is a phonological process here
-+1p+sg:e	# ;
+LEXICON Persubject
+@U.verb.Perf@ PSubject;
 
-LEXICON LBoundp
-[:^[{ Rootsp ;
+LEXICON PSubject
++3p+masc+sg:‰	#;
++3p+fem+sg:‰c'?	#;
++3p+pl:u	#;
++2p+masc+sg:h?	#;	! h alternates with k
+2p+fem+sg:s'?	#;
+2p+pl:ac'?hu	#;
++1p+sg:hu	#;	!hu alternates with ku
 
-LEXICON Rootsp
-lbs MergeRightp ;
-drs MergeRightp ;
-gdl MergeRightp ;
-Xrs MergeRightp ; 	
-lkX MergeRightp ;	
-sXl MergeRightp ;	
-mhl MergeRightp ;	
-frh MergeRightp ;
+LEXICON Infinitive
++nom:0       #;	
 
-LEXICON MergeRightp
-0:}.m%>.{ Templatep ; 
-
-LEXICON Templatep
-+pefective:CVCVC MergeLeftp ;
-
-LEXICON MergeLeftp
-0:}.%<m. Vocalizationp ; 
-
-LEXICON Vocalizationp
-+perf:[e+] RBoundp ;
-
-LEXICON RBoundp
-]:^]  Subjp ;
-	 
-LEXICON Reduplp
-0:^[{ Rrootsp ;
-
-LEXICON Rrootsp
-lem	boundp ;
-nek'	boundp ;
-fek'	boundp ;
-
-LEXICON boundp
-0:}^2^]  Subjp ;
-
-LEXICON Subjp
-+3p+masc+sg:e	# ;
-+3p+fem+sg:ec'	# ;
-+3p+pl:u	# ;
-+2p+masc+sg:h	# ;	! h alternates with k
-2p+fem+sg:s'	# ;
-2p+pl:ac'hu	# ;
-+1p+sg:hu	# ;	! hu alternates with ku
-+1p+pl:en	# ;      !  gedelennn .........1st person act on 1st person ; second person act on second person
-
-LEXICON LBoundin			
-[:^[{ Rootsin ;
-
-LEXICON Rootsin
-lbs MergeRightin ;
-drs MergeRightin ;
-gdl MergeRightin ;
-Xrs MergeRightin ; 	
-lkX MergeRightin ;	
-sXl MergeRightin ;	
-mhl MergeRightin ;	
-frh MergeRightin ;
-
-LEXICON MergeRightin
-0:}.m%>.{ TemPlatein ; 
-
-LEXICON TemPlatein
-+infinitive:CVCVC MergeLeftin ;
-
-LEXICON MergeLeftin
-0:}.%<m. Vocalizationin ; 
-
-
-LEXICON Vocalizationin
-+inf:[e+] RBoundin ;
-
-LEXICON RBoundin
-]:^] 	Endin ;
-
-LEXICON Reduplin
-0:^[{ Rrootsin ;
-
-LEXICON Rrootsin
-lem	boundin ;
-nek'	boundin ;
-fek'	boundin ;
-
-LEXICON boundin
-0:}^2^]  Endin ;
-
-LEXICON Endin
-+nominal:0	# ;	
-
+!I have three main problems now(resulting in an unexpected large number of output.)
+!1. Underlying forms are exploding in the output,in all the forms,  which is bad
+!2. Imperfect prefixes have been optional because of the optionality of the causatives.
+!3. Replace rules are failing, 2nd round ?
+!technical
+!avoiding the flags from showing up in xfst
+!latin to amharic
 
