@@ -58,8 +58,8 @@ amh.save: ../bin/amh.save
 	@echo "*** Building amh.save ***" ;
 	@echo
 	@printf "read lexc < $(SRCS) \n\
-	list C g b t ṯ ǧ  ḫ d ḏ r z č' s š ṣ  s' ḍ ṭ ẓ ć ġ f X Z S K  ñ ś  ž  ž' t' p  p' v č h q k l m n h w y X ; \n\
-	list V a i u o ä e  ; \n\
+	list C g b t ṯ ǧ  ḫ d ḏ r z ź s š ṣ ś ḍ ṭ ẓ ć ġ f ñ ž ť p ṕ v č h q k l m n h w y X ; \n\
+	list V a i u o ä e ə ; \n\
 	compile-replace lower \n\
 	save stack ../bin/amh.save \n\
 	quit \n" > ../tmp/amh-save-script
