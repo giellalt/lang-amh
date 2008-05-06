@@ -5,17 +5,35 @@
 Multichar_Symbols 
 
 ^[ ^] 
-+Msc +Fem 
-+perfective    +imperfective   +gerund    +infinitive
-+nominal +Fut +Gen
++Msc+ +Fem+ +Msc +Fem
++Perf    +Impf   +Ger +Inf Cau+
++Nominal +Fut +Gen
 +1P +2P +3P +Sg +Pl 
 
-@U.verb.Im@  @U.verb.Nmn@   @U.verb.Im@    @U.verb.Perf@   @U.verb.Nmn@
-@U.verb.Ger@ @U.verb.Perf@  @U.imp.Im@ 
- @U.verb.3Pp@ @U.verb.1Pp@ @U.verb.1Psp@ @U.verb.2Pp@ @U.verb.3Pp@ @U.verb.3fsp@ @U.verb.3msp@
 
-č' s' ć ž' t' p'
+@U.imp.Im@
+@U.verb.1Pp@
+@U.verb.1Psp@
+@U.verb.2Pp@
+@U.verb.3Pp@
+@U.verb.3fsp@
+@U.verb.3msp@
+@U.verb.Ger@
+@U.verb.Im@
+@U.verb.Nmn@
+@U.verb.Perf@
 
+
+@U.imp.Im@
+@U.verb.1Pp@
+@U.verb.1Psp@
+@U.verb.2Pp@
+@U.verb.3Pp@
+@U.verb.3fsp@
+@U.verb.3msp@
+@U.verb.Ger@
+@U.verb.Nmn@
+@U.verb.Perf@
 
 
 
@@ -25,30 +43,31 @@ LEXICON Root
 	Causative;
 		
 LEXICON FutPerf
-< yə "+3P":0 "+Sg":0 "+Msc":0 "@U.verb.3msp@" >	Ca;   
-< tə "+3P":0 "+Sg":0 "+Fem":0 "@U.verb.3fsp@" >	Ca;
-< yə "+3P":0 "+Pl":0 "@U.verb.3Pp@" >		Ca;
-< tə "+2P":0 "@U.verb.2Pp@" >		Ca;
-< Xə "+1P":0 "@U.verb.1Psp@" >		Ca;  !this is difficult to write,,,,the 6th letter
-< Xən "+1P":0 "@U.verb.1Pp@" >		Ca;
+< y ə   "+3P+":0 "Sg+":0 "Msc+":0 "@U.verb.3msp@" >	Ca;   
+< t ə   "+3P+":0 "Sg+":0 "Fem+":0 "@U.verb.3fsp@" >	Ca;
+< y ə   "+3P+":0 "Pl+":0          "@U.verb.3Pp@"  >	Ca;
+< t ə   "+2P+":0                  "@U.verb.2Pp@"  >	Ca;
+< X ə   "+1P+":0                  "@U.verb.1Psp@" >	Ca;  
+< X ə n "+1P+":0                  "@U.verb.1Pp@"  >	Ca;
 
 LEXICON Ca
-@U.imp.Im@  Causative ;    ! the causative caused the imperfect prefixes to be optional !which is bad
+@U.imp.Im@  Causative ;  ! the causative caused the imperfect prefixes 
+                         ! to be optional which is bad
 
 LEXICON Nominalizer
-mä@U.verb.Nmn@	Causative ;		
++Nominal+@U.verb.Nmn@:mä@U.verb.Nmn@	Causative ;		
 	   
 
 LEXICON Causative   	    
-as      LBound ;
+Cau+:as      LBound ; ! Should not this have a tag???
 		LBound ;  
-as		LBoundf ;
+Cau+:as		LBoundf ;
 		LBoundf ;
 		
 LEXICON LBoundf
 [:^[{ Rootsf ;
 
-LEXICON Rootsf
+LEXICON Rootsf   ! Here we have 4-letter roots.
 ćkćk 	RightMerg ;  
 mnzr	RightMerg ;
  
@@ -56,9 +75,9 @@ LEXICON RightMerg
 0:}.m%>.{ Templatef ; 
 
 LEXICON Templatef
-CäCäCC@U.verb.Im@  	    RBoundf;	 
-CäCäCäC@U.verb.Perf@	RBoundf;
-CäCCC@U.verb.Ger@	    RBoundf; 
+CäCäCC@U.verb.Im@  	    RBoundf ;	 
+CäCäCäC@U.verb.Perf@	RBoundf ;
+CäCCC@U.verb.Ger@	    RBoundf ; 
 CäCCäC@U.verb.Nmn@	    RBoundf ;
 
 LEXICON RBoundf 
@@ -67,7 +86,7 @@ LEXICON RBoundf
 LEXICON LBound
 [:^[{ Roots ;
 
-LEXICON Roots
+LEXICON Roots   ! Here we have 3-letter roots.
 lbs MergeRight ;
 drs MergeRight ;
 gdl MergeRight ;
@@ -80,11 +99,18 @@ frh MergeRight ;	!verbs that lost 'h' at the end,,,
 LEXICON MergeRight
 0:}.m%>.{ Template ; 
 
-LEXICON Template
-CäCC@U.imp.Im@ 	RBound ;	
-CäCäC@U.verb.Perf@	RBound ;
-CäCC@U.verb.Ger@		RBound ; !the ä is an underlying form, i
-CäCäC@U.verb.Nmn@	RBound ;     !t appears as a when there is consonant deletion
+LEXICON Template    ! Here we expect 3-letter roots
+@U.imp.Im@:CäCC@U.imp.Im@ 	    RBound ;	
+@U.verb.Perf@:CäCäC@U.verb.Perf@	RBound ;
+@U.verb.Ger@:CäCC@U.verb.Ger@	RBound ; !the ä is an underlying form, i
+@U.verb.Nmn@:CäCäC@U.verb.Nmn@	RBound ;     !t appears as a when there is consonant deletion
+
+! Old Template lexicon:
+! CäCC@U.imp.Im@ 	    RBound ;	
+! CäCäC@U.verb.Perf@	RBound ;
+! CäCC@U.verb.Ger@	RBound ; !the ä is an underlying form, i
+! CäCäC@U.verb.Nmn@	RBound ;     !t appears as a when there is consonant deletion
+
 
 LEXICON RBound
 ]:}^] 	All ;
@@ -96,45 +122,45 @@ LEXICON All
 	Infinitive ;
 	  
 LEXICON Imperfect
-@U.imp.Im@     Impsubject;
+@U.imp.Im@     Impsubject ;
 
 LEXICON  Impsubject
-< al "+3P":0 "+Sg":0 "+Msc":0 "@U.verb.3msp@" >	#;   !problem
-< aläćə "+3P":0 "+Sg":0 "+Fem":0 "@U.verb.3fsp@" >		#;
-< alu "+1P":0 "@U.verb.1Pp@" >		#;
-< alähə "+2P":0 "+Sg":0 "+Msc":0 "@U.verb.2Pp@" >	#;	
-< aläs'ə "+2P":0 "+Fem":0 "+Sg":0 "@U.verb.2Pp@" >		#;
-< alaćhu "+2P":0 "+Pl":0 "@U.verb.2Pp@" >		#;
-< alähu "+1P":0 "+Sg":0 "@U.verb.1Psp@" >		#;
-< alänə  "+1P":0 "+Pl":0 "@U.verb.1Pp@" >	   #;
+< a l u       "+1P":0                  "@U.verb.1Pp@"  > # ;
+< a l ä h u   "+1P":0 "+Sg":0          "@U.verb.1Psp@" > # ;
+< a l ä n ə   "+1P":0 "+Pl":0          "@U.verb.1Pp@"  > # ;
+< a l a ć h u "+2P":0 "+Pl":0          "@U.verb.2Pp@"  > # ;
+< a l ä h ə   "+2P":0 "+Sg":0 "+Msc":0 "@U.verb.2Pp@"  > # ;	
+< a l ä ś ə   "+2P":0 "+Sg":0 "+Fem":0 "@U.verb.2Pp@"  > # ;
+< a l         "+3P":0 "+Sg":0 "+Msc":0 "@U.verb.3msp@" > # ;   !problem
+< a l ä ć ə   "+3P":0 "+Sg":0 "+Fem":0 "@U.verb.3fsp@" > # ;
  
 
 LEXICON Gersubject
-@U.verb.Ger@  GSubject;
+@U.verb.Ger@  GSubject ;
 
 LEXICON GSubject
-+3p+Msc+Sg:o	#;
-+3p+Fem+Sg:a	#;
-+3p+Pl:äwə	#;
-+2p+Msc+Sg:ähə  #;
-+2p+Fem+Sg:äs'ə	#;
-+2p+Pl:aćəhu	#;	!there might be a phonological process here, dialects
-+1p+Sg:e	#;
++3P+Msc+Sg:o	# ;
++3P+Fem+Sg:a	# ;
++3P+Pl:äwə	    # ;
++2P+Msc+Sg:ähə  # ;
++2P+Fem+Sg:äśə	# ;
++2P+Pl:aćəhu	# ;	!there might be a phonological process here, dialects
++1P+Sg:e	    # ;
 
 LEXICON Persubject
 @U.verb.Perf@ PSubject;
 
 LEXICON PSubject
-+3p+Msc+Sg:ä	#;
-+3p+Fem+Sg:äćə	#;
-+3p+Pl:u	#;
-+2p+Msc+Sg:hə	#;	! h alternates with k
-2p+Fem+Sg:s'ə	#;
-2p+Pl:aćəhu	#;
-+1p+Sg:hu	#;	!hu alternates with ku
++3P+Msc+Sg:ä	# ;
++3P+Fem+Sg:äćə	# ;
++3P+Pl:u	    # ;
++2P+Msc+Sg:hə	# ;	! h alternates with k
++2P+Fem+Sg:śə	# ;
++2P+Pl:aćəhu	# ;
++1P+Sg:hu	    # ;	!hu alternates with ku
 
 LEXICON Infinitive
-+nom:0       #;	
++Nominal:0       # ; 	
 
 !I have three main problems now(resulting in an unexpected large number of output.)
 !1. Underlying forms are exploding in the output,in all the forms,  which is bad       ?????
