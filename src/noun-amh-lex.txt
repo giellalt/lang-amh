@@ -1,0 +1,37 @@
+﻿Multichar_Symbols     +Masc +Fem  +Sg  +pl  +Def  +InDef  +nom +accus 
+
+LEXICON Root
+	 Possessive;
+	 Nouns&Adjectives;
+LEXICON Possessive
+yä 	Nouns&Adjectives;	!Adjectives and nouns have the same form, they do inflect in the way.
+	 
+LEXICON Nouns&Adjectives	
+lǝjǝ	Number; !regular
+Xähǝya	Number;	
+k'onǝjo	Number;
+räjǝmǝ	Number;
+wuha	Definiteness; 	!uncountable
+ 
+LEXICON Number
++Sg:0	Gender;
++pl:oc'ǝ	Definiteness;
+
+LEXICON Gender
++Masc:0	Definiteness;
++Fem:it	Definiteness;
+ 
+LEXICON Definiteness
++Def:u	Case;
++InDef:0	   #;
+
+LEXICON Case
++nom:0	 #;
++accus:nǝ	#;            !+Def is a prerequisite for +accus(+InDef+accus is out)
+
+!there are few nouns which are inherently  gender assigned becasue of their near contact witht the language speaking community; since thier number is very limited I prefer to list them than to include in the derivation:
+! +Masc : bäre,korma, bal , awra, kiräne
+!+Fem: lam, bazra, gidär, mist, k'eb
+
+
+
