@@ -1,5 +1,11 @@
 
 
+ifeq (victorio.uit.no, $(shell hostname))
+XFST = /usr/local/bin/xfst -utf8
+LEXC = /usr/local/bin/lexc -utf8
+endif
+
+
 XFST = xfst -utf8
 LEXC = lexc -utf8
 
@@ -8,7 +14,7 @@ LEXC = lexc -utf8
 
 
 SRCS = amh-lex.txt \
-#	noun-amh-lex.txt verb-amh-lex.txt \ 
+#	noun-amh-lex.txt verb-amh-lex.txt \
 #	noun-amh-morph.txt verb-amh-morph.txt
 #	acro-amh-lex.txt abbr-amh-lex.txt \
 #	punct-amh-lex.txt prt-amh-lex.txt num-amh-lex.txt 
@@ -58,7 +64,7 @@ amh.save: ../bin/amh.save
 	@echo "*** Building amh.save ***" ;
 	@echo
 	@printf "read lexc < $(SRCS) \n\
-	list C g b t ṯ ǧ  ḫ d ḏ r z ź s š ṣ ś ḍ ṭ ẓ ć ġ f ñ ž ť p ṕ v č h q k l m n h w y X ; \n\
+	list C b d f g h k l m n p q r s t v w y z ñ č ġ ǧ ṣ š ṭ ṯ ť ẓ ž ḍ ḏ ḫ ṕ X  ; \n\
 	list V a i u o ä e ə ; \n\
 	compile-replace lower \n\
 	save stack ../bin/amh.save \n\
