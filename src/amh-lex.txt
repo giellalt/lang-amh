@@ -9,6 +9,8 @@ Multichar_Symbols
 +Perf    +Impf   +Ger +Inf Cau+
 +Nominal +Fut +Gen
 +1P +2P +3P +Sg +Pl 
+  +Sg     +Def  +InDef  +Nom +Acc
+
 
 
 @U.imp.Im@
@@ -38,6 +40,64 @@ Multichar_Symbols
 
 
 LEXICON Root
+	Nominals ;
+	Verbs ;
+	
+
+! ======================================== !
+!                  Nominals                !
+! ======================================== !
+
+LEXICON Nominals
+	 Possessive ;
+	 NounsAdjectives ;
+
+	 LEXICON Possessive
+yä 	NounsAdjectives;	!Adjectives and nouns have the same form, they do inflect in the way.
+	 
+
+
+	 
+LEXICON NounsAdjectives	
+lǝjǝ	Number; !regular
+Xähǝya	Number;	
+qonǝjo	Number;
+räjǝmǝ	Number;
+wuha	Definiteness; 	!uncountable
+ 
+
+
+	 
+! Post-root morphology	 
+	 
+LEXICON Number
++Sg:0	Gender+Pl:očǝ	Definiteness;
+
+LEXICON Gender
++Msc:0	Definiteness;
++Fem:it	Definiteness;
+ 
+LEXICON Definiteness
++Def:u	Case;
++InDef:0	   #;
+
+LEXICON Case
++Nom:0	 #;
++Acc:nǝ	#;            !+Def is a prerequisite for +Acc(+InDef+Accis out)
+
+!there are few nouns which are inherently  gender assigned becasue of their near contact witht the language speaking community; since thier number is very limited I prefer to list them than to include in the derivation:
+! +Msc : bäre,korma, bal , awra, kiräne
+!+Fem: lam, bazra, gidär, mist, k'eb
+
+
+
+ 
+! ======================================== !
+!                    Verbs
+! ======================================== !
+
+
+LEXICON Verbs	
 	FutPerf;	
 	Nominalizer;
 	Causative;
@@ -68,7 +128,7 @@ LEXICON LBoundf
 [:^[{ Rootsf ;
 
 LEXICON Rootsf   ! Here we have 4-letter roots.
-ćkćk 	RightMerg ;  
+čkčk 	RightMerg ;  
 mnzr	RightMerg ;
  
 LEXICON RightMerg
@@ -128,11 +188,11 @@ LEXICON  Impsubject
 < a l u       "+1P":0                  "@U.verb.1Pp@"  > # ;
 < a l ä h u   "+1P":0 "+Sg":0          "@U.verb.1Psp@" > # ;
 < a l ä n ə   "+1P":0 "+Pl":0          "@U.verb.1Pp@"  > # ;
-< a l a ć h u "+2P":0 "+Pl":0          "@U.verb.2Pp@"  > # ;
+< a l a č h u "+2P":0 "+Pl":0          "@U.verb.2Pp@"  > # ;
 < a l ä h ə   "+2P":0 "+Sg":0 "+Msc":0 "@U.verb.2Pp@"  > # ;	
-< a l ä ś ə   "+2P":0 "+Sg":0 "+Fem":0 "@U.verb.2Pp@"  > # ;
+< a l ä š ə   "+2P":0 "+Sg":0 "+Fem":0 "@U.verb.2Pp@"  > # ;
 < a l         "+3P":0 "+Sg":0 "+Msc":0 "@U.verb.3msp@" > # ;   !problem
-< a l ä ć ə   "+3P":0 "+Sg":0 "+Fem":0 "@U.verb.3fsp@" > # ;
+< a l ä č ə   "+3P":0 "+Sg":0 "+Fem":0 "@U.verb.3fsp@" > # ;
  
 
 LEXICON Gersubject
@@ -143,8 +203,8 @@ LEXICON GSubject
 +3P+Fem+Sg:a	# ;
 +3P+Pl:äwə	    # ;
 +2P+Msc+Sg:ähə  # ;
-+2P+Fem+Sg:äśə	# ;
-+2P+Pl:aćəhu	# ;	!there might be a phonological process here, dialects
++2P+Fem+Sg:äšə	# ;
++2P+Pl:ačəhu	# ;	!there might be a phonological process here, dialects
 +1P+Sg:e	    # ;
 
 LEXICON Persubject
@@ -152,11 +212,11 @@ LEXICON Persubject
 
 LEXICON PSubject
 +3P+Msc+Sg:ä	# ;
-+3P+Fem+Sg:äćə	# ;
++3P+Fem+Sg:äčə	# ;
 +3P+Pl:u	    # ;
 +2P+Msc+Sg:hə	# ;	! h alternates with k
-+2P+Fem+Sg:śə	# ;
-+2P+Pl:aćəhu	# ;
++2P+Fem+Sg:šə	# ;
++2P+Pl:ačəhu	# ;
 +1P+Sg:hu	    # ;	!hu alternates with ku
 
 LEXICON Infinitive
