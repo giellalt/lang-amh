@@ -7,10 +7,10 @@ LEXC = lexc -utf8
 # Source files
 
 
-SRCS = amh-lex.txt #\
-#	noun-amh-lex.txt verb-amh-lex.txt abbr-amh-lex.txt \
+SRCS = amh-lex.txt \
+#	noun-amh-lex.txt verb-amh-lex.txt \ 
 #	noun-amh-morph.txt verb-amh-morph.txt
-#	acro-amh-lex.txt \
+#	acro-amh-lex.txt abbr-amh-lex.txt \
 #	punct-amh-lex.txt prt-amh-lex.txt num-amh-lex.txt 
 
 
