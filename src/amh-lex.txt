@@ -64,11 +64,9 @@ Xähǝya	Number;
 qonǝjo	Number;
 räjǝmǝ	Number;
 wuha	Definiteness; 	!uncountable
- 
+ 	 
 
-
-	 
-! Post-root morphology	 
+	 ! Post-root morphology	 
 	 
 LEXICON Number
 +Sg:0	Gender ;
