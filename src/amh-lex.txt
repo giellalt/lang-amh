@@ -71,7 +71,8 @@ wuha	Definiteness; 	!uncountable
 ! Post-root morphology	 
 	 
 LEXICON Number
-+Sg:0	Gender+Pl:očǝ	Definiteness;
++Sg:0	Gender ;
++Pl:očǝ	Definiteness;
 
 LEXICON Gender
 +Msc:0	Definiteness;
