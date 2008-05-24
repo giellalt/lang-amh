@@ -119,9 +119,9 @@ LEXICON Nominalizer
 
 LEXICON Causative   	    
 Cau+:as      LBound ; ! Should not this have a tag???
-		LBound ;  
+		     LBound ;  
 Cau+:as		LBoundf ;
-		LBoundf ;
+		    LBoundf ;
 		
 LEXICON LBoundf
 [:^[{ Rootsf ;
@@ -159,10 +159,10 @@ LEXICON MergeRight
 0:}.m%>.{ Template ; 
 
 LEXICON Template    ! Here we expect 3-letter roots
-@U.imp.Im@:CäCC@U.imp.Im@ 	    RBound ;	
+@U.imp.Im@:CCäC@U.imp.Im@ 	    RBound ;	
 @U.verb.Perf@:CäCäC@U.verb.Perf@	RBound ;
 @U.verb.Ger@:CäCC@U.verb.Ger@	RBound ; !the ä is an underlying form, i
-@U.verb.Nmn@:CäCäC@U.verb.Nmn@	RBound ;     !t appears as a when there is consonant deletion
+@U.verb.Nmn@:CCäC@U.verb.Nmn@	RBound ;     !t appears as a when there is consonant deletion
 
 ! Old Template lexicon:
 ! CäCC@U.imp.Im@ 	    RBound ;	
