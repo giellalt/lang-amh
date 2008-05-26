@@ -59,18 +59,20 @@ yä 	NounsAdjectives;	!Adjectives and nouns have the same form, they do inflect 
 
 	 
 LEXICON NounsAdjectives	
-lǝjǝ	Number; !regular
-Xähǝya	Number;	
-qonǝjo	Number;
-räjǝmǝ	Number;
+lj	Number; !regular
+Xähya	Number;	
+qonjo	Number;
+räjm	Number;
 wuha	Definiteness; 	!uncountable
- 	 
+ 
 
-	 ! Post-root morphology	 
+
+	 
+! Post-root morphology	 
 	 
 LEXICON Number
-+Sg:0	Gender ;
-+Pl:očǝ	Definiteness;
++Sg:0	Gender;
++Pl:oč	Definiteness;
 
 LEXICON Gender
 +Msc:0	Definiteness;
@@ -82,7 +84,7 @@ LEXICON Definiteness
 
 LEXICON Case
 +Nom:0	 #;
-+Acc:nǝ	#;            !+Def is a prerequisite for +Acc(+InDef+Accis out)
++Acc:n	#;            !+Def is a prerequisite for +Acc(+InDef+Accis out)
 
 !there are few nouns which are inherently  gender assigned becasue of their near contact witht the language speaking community; since thier number is very limited I prefer to list them than to include in the derivation:
 ! +Msc : bäre,korma, bal , awra, kiräne
@@ -102,12 +104,12 @@ LEXICON Verbs
 	Causative;
 		
 LEXICON FutPerf
-< y ə   "+3P+":0 "Sg+":0 "Msc+":0 "@U.verb.3msp@" >	Ca;   
-< t ə   "+3P+":0 "Sg+":0 "Fem+":0 "@U.verb.3fsp@" >	Ca;
-< y ə   "+3P+":0 "Pl+":0          "@U.verb.3Pp@"  >	Ca;
-< t ə   "+2P+":0                  "@U.verb.2Pp@"  >	Ca;
-< X ə   "+1P+":0                  "@U.verb.1Psp@" >	Ca;  
-< X ə n "+1P+":0                  "@U.verb.1Pp@"  >	Ca;
+< y   "+3P+":0 "Sg+":0 "Msc+":0 "@U.verb.3msp@" >	Ca;   
+< t   "+3P+":0 "Sg+":0 "Fem+":0 "@U.verb.3fsp@" >	Ca;
+< y   "+3P+":0 "Pl+":0          "@U.verb.3Pp@"  >	Ca;
+< t   "+2P+":0                  "@U.verb.2Pp@"  >	Ca;
+< X   "+1P+":0                  "@U.verb.1Psp@" >	Ca;  
+< X  n "+1P+":0                  "@U.verb.1Pp@"  >	Ca;
 
 LEXICON Ca
 @U.imp.Im@  Causative ;  ! the causative caused the imperfect prefixes 
@@ -118,10 +120,10 @@ LEXICON Nominalizer
 	   
 
 LEXICON Causative   	    
-Cau+:as      LBound ; ! Should not this have a tag???
-		     LBound ;  
-Cau+:as		LBoundf ;
-		    LBoundf ;
+Cau+:as   LBound ; ! Should not this have a tag???
+		  LBound ;  
+Cau+:as	   LBoundf ;
+		   LBoundf ;
 		
 LEXICON LBoundf
 [:^[{ Rootsf ;
@@ -159,10 +161,10 @@ LEXICON MergeRight
 0:}.m%>.{ Template ; 
 
 LEXICON Template    ! Here we expect 3-letter roots
-@U.imp.Im@:CCäC@U.imp.Im@ 	    RBound ;	
+@U.imp.Im@:CäCC@U.imp.Im@ 	    RBound ;	
 @U.verb.Perf@:CäCäC@U.verb.Perf@	RBound ;
 @U.verb.Ger@:CäCC@U.verb.Ger@	RBound ; !the ä is an underlying form, i
-@U.verb.Nmn@:CCäC@U.verb.Nmn@	RBound ;     !t appears as a when there is consonant deletion
+@U.verb.Nmn@:CäCäC@U.verb.Nmn@	RBound ;     !t appears as a when there is consonant deletion
 
 ! Old Template lexicon:
 ! CäCC@U.imp.Im@ 	    RBound ;	
@@ -186,12 +188,12 @@ LEXICON Imperfect
 LEXICON  Impsubject
 < a l u       "+1P":0                  "@U.verb.1Pp@"  > # ;
 < a l ä h u   "+1P":0 "+Sg":0          "@U.verb.1Psp@" > # ;
-< a l ä n ə   "+1P":0 "+Pl":0          "@U.verb.1Pp@"  > # ;
+< a l ä n     "+1P":0 "+Pl":0          "@U.verb.1Pp@"  > # ;
 < a l a č h u "+2P":0 "+Pl":0          "@U.verb.2Pp@"  > # ;
-< a l ä h ə   "+2P":0 "+Sg":0 "+Msc":0 "@U.verb.2Pp@"  > # ;	
-< a l ä š ə   "+2P":0 "+Sg":0 "+Fem":0 "@U.verb.2Pp@"  > # ;
+< a l ä h     "+2P":0 "+Sg":0 "+Msc":0 "@U.verb.2Pp@"  > # ;	
+< a l ä š     "+2P":0 "+Sg":0 "+Fem":0 "@U.verb.2Pp@"  > # ;
 < a l         "+3P":0 "+Sg":0 "+Msc":0 "@U.verb.3msp@" > # ;   !problem
-< a l ä č ə   "+3P":0 "+Sg":0 "+Fem":0 "@U.verb.3fsp@" > # ;
+< a l ä č     "+3P":0 "+Sg":0 "+Fem":0 "@U.verb.3fsp@" > # ;
  
 
 LEXICON Gersubject
@@ -200,10 +202,10 @@ LEXICON Gersubject
 LEXICON GSubject
 +3P+Msc+Sg:o	# ;
 +3P+Fem+Sg:a	# ;
-+3P+Pl:äwə	    # ;
-+2P+Msc+Sg:ähə  # ;
-+2P+Fem+Sg:äšə	# ;
-+2P+Pl:ačəhu	# ;	!there might be a phonological process here, dialects
++3P+Pl:äw	    # ;
++2P+Msc+Sg:äh   # ;
++2P+Fem+Sg:äš 	# ;
++2P+Pl:ačhu	# ;	!there might be a phonological process here, dialects
 +1P+Sg:e	    # ;
 
 LEXICON Persubject
@@ -211,11 +213,11 @@ LEXICON Persubject
 
 LEXICON PSubject
 +3P+Msc+Sg:ä	# ;
-+3P+Fem+Sg:äčə	# ;
++3P+Fem+Sg:äč	# ;
 +3P+Pl:u	    # ;
-+2P+Msc+Sg:hə	# ;	! h alternates with k
-+2P+Fem+Sg:šə	# ;
-+2P+Pl:ačəhu	# ;
++2P+Msc+Sg:h	# ;	! h alternates with k
++2P+Fem+Sg:š	# ;
++2P+Pl:ačhu	# ;
 +1P+Sg:hu	    # ;	!hu alternates with ku
 
 LEXICON Infinitive
