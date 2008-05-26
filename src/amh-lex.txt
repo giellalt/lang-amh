@@ -104,11 +104,11 @@ LEXICON Verbs
 	Causative;
 		
 LEXICON FutPerf
-< y   "+3P+":0 "Sg+":0 "Msc+":0 "@U.verb.3msp@" >	Ca;   
-< t   "+3P+":0 "Sg+":0 "Fem+":0 "@U.verb.3fsp@" >	Ca;
-< y   "+3P+":0 "Pl+":0          "@U.verb.3Pp@"  >	Ca;
-< t   "+2P+":0                  "@U.verb.2Pp@"  >	Ca;
-< X   "+1P+":0                  "@U.verb.1Psp@" >	Ca;  
+< y  "+3P+":0 "Sg+":0 "Msc+":0 "@U.verb.3msp@" >	Ca;   
+< t  "+3P+":0 "Sg+":0 "Fem+":0 "@U.verb.3fsp@" >	Ca;
+< y  "+3P+":0 "Pl+":0          "@U.verb.3Pp@"  >	Ca;
+< t  "+2P+":0                  "@U.verb.2Pp@"  >	Ca;
+< X  "+1P+":0                  "@U.verb.1Psp@" >	Ca;  
 < X  n "+1P+":0                  "@U.verb.1Pp@"  >	Ca;
 
 LEXICON Ca
@@ -217,7 +217,7 @@ LEXICON PSubject
 +3P+Pl:u	    # ;
 +2P+Msc+Sg:h	# ;	! h alternates with k
 +2P+Fem+Sg:š	# ;
-+2P+Pl:ačhu	# ;
++2P+Pl:ačhu	    # ;
 +1P+Sg:hu	    # ;	!hu alternates with ku
 
 LEXICON Infinitive
