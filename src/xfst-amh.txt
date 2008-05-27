@@ -1,6 +1,6 @@
 echo < Define vowels > 
 
-define Vw [a|e|i|o|ä|u] ;
+define V [a|e|i|o|ä|u] ;
 
 echo <<< And then the rules ... >>>> 
 
@@ -13,12 +13,12 @@ define h3 h -> 0 || ä _  ;
 define ht h -> t ||  _ o ;
 echo <<< Now for some X rules >>>
 define X1 ä -> 0 || .#. X _ ;
-define X2 X -> 0 ||  _ Vw ;
-define X3 X -> 0 || Vw _  ;
+define X2 X -> 0 ||  _ V ;
+define X3 X -> 0 || V _  ;
 echo <<< Vowel change rules >>>
-define iy i -> y || Vw _  ;
-define uw u -> w || Vw _  ;
-define ow o -> w || Vw _  ;
+define iy i -> y || V _  ;
+define uw u -> w || V _  ;
+define ow o -> w || V _  ;
 define a1 ä -> a ||  _ ä ;
 define a2 ä -> 0 ||  _ a ;
 define a3 ä -> 0 || a _  ;
