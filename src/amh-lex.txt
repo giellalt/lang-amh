@@ -53,13 +53,12 @@ LEXICON Nominals
 	 NounsAdjectives ;
 
 LEXICON Possessive
-yä 	NounsAdjectives;!Adjectives and nouns have the same form, they do inflectin the way.
+yä 	NounsAdjectives;  !Adjectives and nouns have the same form they do inflectin the way
 	 
-
 
 	 
 LEXICON NounsAdjectives	
-lj	Number; !regular
+lj	    Number; !regular
 Xähy	Number;	
 qonjo	Number;
 räjm	Number;
