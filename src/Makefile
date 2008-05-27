@@ -1,19 +1,18 @@
 
 
 ifeq (victorio.uit.no, $(shell hostname))
-XFST = /usr/local/bin/xfst -utf8
-LEXC = /usr/local/bin/lexc -utf8
+XFST = /usr/local/bin/xfst 
+LEXC = /usr/local/bin/lexc 
 endif
 
 
-XFST = xfst -utf8
-LEXC = lexc -utf8
-
+XFST = xfst
+LEXC = lexc
 
 # Source files
 
 
-SRCS = amh-lex.txt \
+# SRCS = amh-lex.txt xfst-amh.txt \
 #	noun-amh-lex.txt verb-amh-lex.txt \
 #	noun-amh-morph.txt verb-amh-morph.txt
 #	acro-amh-lex.txt abbr-amh-lex.txt \
@@ -42,29 +41,29 @@ iamh.fst: ../bin/iamh.fst
 
 # Here comes the part building the basic parser.
 # **********************************************
-#amh.fst: ../bin/amh.fst
-#	 ../bin/amh.fst: ../bin/xfst-amh.bin ../bin/amh.save
-#	@echo
-#	@echo "*** Building the parser amh.fst ***"
-#	@echo
-#	@printf "read regex [[@\"../bin/amh.save\"] .o. \
-#	[@\"../bin/xfst-amh.bin\"]] ; \n\
-#	save stack ../bin/amh.fst \n\
-#	quit \n" > ../tmp/amh-fst-script
-#	$(XFST) < ../tmp/amh-fst-script
-#	@rm -f ../tmp/amh-fst-script
+amh.fst: ../bin/amh.fst
+	 ../bin/amh.fst: ../bin/xfst-amh.bin ../bin/amh.save
+	@echo
+	@echo "*** Building the parser amh.fst ***"
+	@echo
+	@printf "read regex [[@\"../bin/amh.save\"] .o. \
+	[@\"../bin/xfst-amh.bin\"]] ; \n\
+	save stack ../bin/amh.fst \n\
+	quit \n" > ../tmp/amh-fst-script
+	$(XFST) < ../tmp/amh-fst-script
+	@rm -f ../tmp/amh-fst-script
 
 
 # The first goal is to build amh-lex.save
 # This goal depends on a bunch of lexicon files
 
 amh.save: ../bin/amh.save
-../bin/amh.save: $(SRCS)
+../bin/amh.save: amh-lex.txt
 	@echo
 	@echo "*** Building amh.save ***" ;
 	@echo
 	@printf "read lexc < $(SRCS) \n\
-	list C b d f g h k l m n p q r s t v w y z ñ č ġ ǧ ṣ š ṭ ṯ ť ẓ ž ḍ ḏ ḫ ṕ X  ; \n\
+	list C b d f g h k l m n p q r s t v w y z ñ č ġ ǧ ṣ š ṭ ṯ ť ẓ ž ḍ ḏ ḫ X  ; \n\
 	list V a i u o ä e  ; \n\
 	compile-replace lower \n\
 	save stack ../bin/amh.save \n\
@@ -77,17 +76,18 @@ amh.save: ../bin/amh.save
 # Here we build xfst-amh.bin, the morphophonological component.
 # This goal depends on xfst-amh.txt
 
-#xfst-amh.bin: ../bin/xfst-amh.bin
-#../bin/xfst-amh.bin: xfst-amh.txt
-#	@echo
-#	@echo "*** Building xfst-amh.bin ***" ;
-#	@echo
-#	@printf "source xfst-amh.txt \n\
-#	save stack ../bin/xfst-amh.bin \n\
-#	quit \n" > ../tmp/xfst-amh-script
-#	$(XFST) < ../tmp/xfst-amh-script
-#	@rm -f ../tmp/xfst-amh-script
-#
+xfst-amh.bin: ../bin/xfst-amh.bin
+../bin/xfst-amh.bin: xfst-amh.txt
+	@echo
+	@echo "*** Building xfst-amh.bin ***" ;
+	@echo
+	@printf "source xfst-amh.txt \n\
+	save stack ../bin/xfst-amh.bin \n\
+	quit \n" > ../tmp/xfst-amh-script
+	$(XFST) < ../tmp/xfst-amh-script
+	@rm -f ../tmp/xfst-amh-script
+
+
 
 
 #syll2lat.fst: ../bin/syll2lat.fst
