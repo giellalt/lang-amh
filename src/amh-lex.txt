@@ -53,24 +53,31 @@ LEXICON Nominals
 	 NounsAdjectives ;
 
 LEXICON Possessive
-yä 	NounsAdjectives;  !Adjectives and nouns have the same form they do inflectin the way
+yä 	NounsAdjectives ;  !Adjectives and nouns have the same form they do inflectin the way
 	 
 
 	 
 LEXICON NounsAdjectives	
-lj	    Number; !regular
-Xähy	Number;	
-qonjo	Number;
-räjm	Number;
-wuha	Definiteness; 	!uncountable
+lj	    NNumber ; !regular
+Xähy	NNumber ;	
+qonjo	ANumber ;
+räjm	ANumber ;
+wuha	NDefiniteness ; 	!uncountable
  
+LEXICON NNumber
++N: Number ;
 
+LEXICON ANumber
++A: Number ;
+
+LEXICON NDefiniteness
++N: Definiteness ;
 
 !Post root morphology
 	 
 LEXICON Number
-+Sg:0	Gender;
-+Pl:oč	Definiteness;
++Sg:0	Gender ;
++Pl:oč	Definiteness ;
 
 LEXICON Gender
 +Msc:0	Definiteness;
