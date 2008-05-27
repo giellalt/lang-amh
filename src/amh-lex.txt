@@ -141,7 +141,7 @@ zkzk 	RightMerg ;
 mnzr	RightMerg ;
  
 LEXICON RightMerg
-0:}.m%>.{ Templatef ; 
+-:}.m%>.{ Templatef ; 
 
 LEXICON Templatef
 CäCäCC@U.verb.Im@  	    RBoundf ;	 
@@ -166,7 +166,7 @@ mhl MergeRight ;	!verbs that lost 'h' at the mid
 frh MergeRight ;	!verbs that lost 'h' at the end,,, 
 
 LEXICON MergeRight
-0:}.m%>.{ Template ; 
+-:}.m%>.{ Template ; 
 
 LEXICON Template    ! Here we expect 3-letter roots
 !@U.imp.Im@:CCäC@U.imp.Im@ 	    RBound ;	
