@@ -52,15 +52,15 @@ LEXICON Nominals
 	 Possessive ;
 	 NounsAdjectives ;
 
-	 LEXICON Possessive
-yä 	NounsAdjectives;	!Adjectives and nouns have the same form, they do inflect in the way.
+LEXICON Possessive
+yä 	NounsAdjectives;!Adjectives and nouns have the same form, they do inflectin the way.
 	 
 
 
 	 
 LEXICON NounsAdjectives	
 lj	Number; !regular
-Xähya	Number;	
+Xähy	Number;	
 qonjo	Number;
 räjm	Number;
 wuha	Definiteness; 	!uncountable
@@ -99,37 +99,40 @@ LEXICON Case
 
 
 LEXICON Verbs	
-	FutPerf;	
+	ImPerfc;	
 	Nominalizer;
 	Causative;
 		
-LEXICON FutPerf
+LEXICON ImPerfc    !the function of these prefixes is not clear yet
 < y  "+3P+":0 "Sg+":0 "Msc+":0 "@U.verb.3msp@" >	Ca;   
 < t  "+3P+":0 "Sg+":0 "Fem+":0 "@U.verb.3fsp@" >	Ca;
 < y  "+3P+":0 "Pl+":0          "@U.verb.3Pp@"  >	Ca;
 < t  "+2P+":0                  "@U.verb.2Pp@"  >	Ca;
 < X  "+1P+":0                  "@U.verb.1Psp@" >	Ca;  
-< X  n "+1P+":0                  "@U.verb.1Pp@"  >	Ca;
+< X n "+1P+":0                  "@U.verb.1Pp@"  >	Ca;
 
 LEXICON Ca
-@U.imp.Im@  Causative ;  ! the causative caused the imperfect prefixes 
-                         ! to be optional which is bad
+@U.imp.Im@  Causativ ;  ! the causative caused the imperfect prefixes 
+              LBound;          ! to be optional which is bad
+
+LEXICON Causativ !I add this lexicon to avoid the conflict of the prefixes and the causative
+as       LBound;
 
 LEXICON Nominalizer
 +Nominal+@U.verb.Nmn@:mä@U.verb.Nmn@	Causative ;		
 	   
 
 LEXICON Causative   	    
-Cau+:as   LBound ; ! Should not this have a tag???
-		  LBound ;  
-Cau+:as	   LBoundf ;
-		   LBoundf ;
+< a s "Cau+":0 "@U.imp.Cau@"  >   LBound ; ! Should not this have a tag???
+		                  LBound ;  
+   	                          LBoundf ;
+		                  LBoundf ;
 		
-LEXICON LBoundf
+LEXICON LBoundf     !verbs with 4-consonant roots(f=four)
 [:^[{ Rootsf ;
 
-LEXICON Rootsf   ! Here we have 4-letter roots.
-čkčk 	RightMerg ;  
+LEXICON Rootsf   
+zkzk 	RightMerg ;  
 mnzr	RightMerg ;
  
 LEXICON RightMerg
@@ -137,17 +140,17 @@ LEXICON RightMerg
 
 LEXICON Templatef
 CäCäCC@U.verb.Im@  	    RBoundf ;	 
-CäCäCäC@U.verb.Perf@	RBoundf ;
+CäCäCäC@U.verb.Perf@	    RBoundf ;
 CäCCC@U.verb.Ger@	    RBoundf ; 
 CäCCäC@U.verb.Nmn@	    RBoundf ;
 
 LEXICON RBoundf 
 ]:}^] 	All ;
 				 				
-LEXICON LBound
+LEXICON LBound     !verbs with 3-consonant roots
 [:^[{ Roots ;
 
-LEXICON Roots   ! Here we have 3-letter roots.
+LEXICON Roots    
 lbs MergeRight ;
 drs MergeRight ;
 gdl MergeRight ;
@@ -161,16 +164,15 @@ LEXICON MergeRight
 0:}.m%>.{ Template ; 
 
 LEXICON Template    ! Here we expect 3-letter roots
-@U.imp.Im@:CäCC@U.imp.Im@ 	    RBound ;	
-@U.verb.Perf@:CäCäC@U.verb.Perf@	RBound ;
-@U.verb.Ger@:CäCC@U.verb.Ger@	RBound ; !the ä is an underlying form, i
-@U.verb.Nmn@:CäCäC@U.verb.Nmn@	RBound ;     !t appears as a when there is consonant deletion
+!@U.imp.Im@:CCäC@U.imp.Im@ 	    RBound ;	
+!@U.verb.Perf@:CäCäC@U.verb.Perf@	RBound ;
+!@U.verb.Ger@:CäCC@U.verb.Ger@	RBound ; !the ä is an underlying form, i
+!@U.verb.Nmn@:CCäC@U.verb.Nmn@	RBound ;  !t appears as a when there is consonant deletion
 
-! Old Template lexicon:
-! CäCC@U.imp.Im@ 	    RBound ;	
-! CäCäC@U.verb.Perf@	RBound ;
-! CäCC@U.verb.Ger@	RBound ; !the ä is an underlying form, i
-! CäCäC@U.verb.Nmn@	RBound ;     !t appears as a when there is consonant deletion
+CäCC@U.imp.Im@ 	        RBound ;	
+CäCäC@U.verb.Perf@	RBound ;
+CäCC@U.verb.Ger@	RBound ; !the ä is an underlying form, i
+CCäC@U.verb.Nmn@	RBound ;     !t appears as a when there is consonant deletion
 
 
 LEXICON RBound
@@ -202,9 +204,9 @@ LEXICON Gersubject
 LEXICON GSubject
 +3P+Msc+Sg:o	# ;
 +3P+Fem+Sg:a	# ;
-+3P+Pl:äw	    # ;
++3P+Pl:äw	# ;
 +2P+Msc+Sg:äh   # ;
-+2P+Fem+Sg:äš 	# ;
++2P+Fem+Sg:äš	# ;
 +2P+Pl:ačhu	# ;	!there might be a phonological process here, dialects
 +1P+Sg:e	    # ;
 
@@ -217,7 +219,7 @@ LEXICON PSubject
 +3P+Pl:u	    # ;
 +2P+Msc+Sg:h	# ;	! h alternates with k
 +2P+Fem+Sg:š	# ;
-+2P+Pl:ačhu	    # ;
++2P+Pl:ačhu	# ;
 +1P+Sg:hu	    # ;	!hu alternates with ku
 
 LEXICON Infinitive
@@ -225,9 +227,9 @@ LEXICON Infinitive
 
 !I have three main problems now(resulting in an unexpected large number of output.)
 !1. Underlying forms are exploding in the output,in all the forms,  which is bad       ?????
-!2. Imperfect prefixes have been optional because of the optionality of the causatives.
+!2. Imperfect prefixes have been optional because of the optionality of the causatives.?????
 !3. Replace rules are failing, 2nd round ?
 !technical
-!avoiding the flags from showing up in xfst
-!latin to amharic
+!avoiding the flags from showing up in xfst <--solved
+!latin to amharic <---------solved
 
