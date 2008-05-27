@@ -6,8 +6,8 @@ LEXC = /usr/local/bin/lexc
 endif
 
 
-XFST = xfst
-LEXC = lexc
+XFST = xfst -utf8
+LEXC = lexc -utf8
 
 # Source files
 
@@ -24,7 +24,7 @@ LEXC = lexc
 # It is dependent upon amh.save; change to amh.fst if an xfst file is needed.
 
 iamh.fst: ../bin/iamh.fst
-../bin/iamh.fst: ../bin/amh.save # ../bin/abbr.txt ../bin/syll2lat.fst ../bin/lat2syll.fst
+../bin/iamh.fst: ../bin/amh.fst # ../bin/abbr.txt ../bin/syll2lat.fst ../bin/lat2syll.fst
 	@echo
 	@echo "*** Building the inverse iamh.fst ***"
 	@echo
@@ -42,7 +42,7 @@ iamh.fst: ../bin/iamh.fst
 # Here comes the part building the basic parser.
 # **********************************************
 amh.fst: ../bin/amh.fst
-	 ../bin/amh.fst: ../bin/xfst-amh.bin ../bin/amh.save
+../bin/amh.fst: ../bin/xfst-amh.bin ../bin/amh.save
 	@echo
 	@echo "*** Building the parser amh.fst ***"
 	@echo
@@ -62,7 +62,7 @@ amh.save: ../bin/amh.save
 	@echo
 	@echo "*** Building amh.save ***" ;
 	@echo
-	@printf "read lexc < $(SRCS) \n\
+	@printf "read lexc < amh-lex.txt \n\
 	list C b d f g h j k l m n p q r s t v w y z ñ č ġ ǧ ṣ š ṭ ṯ ť ẓ ž ḍ ḏ ḫ X  ; \n\
 	list V a i u o ä e  ; \n\
 	compile-replace lower \n\
