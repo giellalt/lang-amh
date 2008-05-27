@@ -1,29 +1,47 @@
-echo << We define vowels >>
+echo < Define vowels > 
 
-define Vw [ a | e | i | o | u | y | ä | ë | ï | ö | ü ] ;
+define Vw [a|e|i|o|ä|u] ;
 
-echo << We define rules >>
+echo <<< And then the rules ... >>>> 
 
-define h0 h -> 0 || Vw _ Vw ;
-define ht h -> t || _ o ;
-define äa ä -> a || X _ ;
-define X0 X -> 0 || _ Vw , Vw_ ;
-define iy i -> y || Vw _ ;
-define uw u -> w || Vw_ ;
-define ow o -> w || Vw_ ;
-define a1 ä ä -> a ;
-define a2 ä a -> a ;
-define a3 a ä -> a ;  
-define a4 a a -> a ; 
-define sä s -> ä || _ e.#. ;
-define tc t -> č || _ e.#. ;  
+define ai ä -> i ||  _ h ;
 
-echo << We read the regular expressions >>
+echo <<< h rules >>>
+
+define h1 h -> 0 ||  _ [ä|a] .#.  ;
+define h3 h -> 0 || ä _  ;
+define ht h -> t ||  _ o ;
+echo <<< Now for some X rules >>>
+define X1 ä -> 0 || .#. X _ ;
+define X2 X -> 0 ||  _ Vw ;
+define X3 X -> 0 || Vw _  ;
+echo <<< Vowel change rules >>>
+define iy i -> y || Vw _  ;
+define uw u -> w || Vw _  ;
+define ow o -> w || Vw _  ;
+define a1 ä -> a ||  _ ä ;
+define a2 ä -> 0 ||  _ a ;
+define a3 ä -> 0 || a _  ;
+define a4 a -> 0 || a _  ;
+echo s, t, l, such things
+define ss s e -> š || _ .#. ;
+define tc t -> č ||  _ e .#.  ;
+define ll l -> y  ||  _ e .#.  ;
+define nn n -> ñ ||  _ e .#.  ;
+define zz z -> ž ||  _ e .#.  ;
+define dd d -> ǧ ||  _ e .#.  ;
+
+
+echo < Now we compile > ;
+
 read regex [
-h0
+    ai
+.o. h1
+.o. h3
 .o. ht
-.o. äa
-.o. X0
+.o. X1
+.o. X2
+.o. X3
 .o. iy
 .o. uw
 .o. ow
@@ -31,7 +49,10 @@ h0
 .o. a2
 .o. a3
 .o. a4
-.o. sä
-.o. tc]; 
+.o. ss
+.o. tc
+.o. ll
+.o. nn
+.o. zz
+.o. dd] ;
 
-!!! damn characters are disturbing me,,, where can I find č in -utf8 form?? XFST says it is an illegal character
