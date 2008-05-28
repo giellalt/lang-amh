@@ -15,17 +15,22 @@ Sg+ Pl+
 +1P +2P +3P 
 
 
+
 @U.imp.Im@
+@U.verb.Ger@
+@U.verb.Im@
+@U.verb.Nmn@
+@U.verb.Perf@
 @U.verb.1Pp@
 @U.verb.1Psp@
 @U.verb.2Pp@
 @U.verb.3Pp@
 @U.verb.3fsp@
 @U.verb.3msp@
-@U.verb.Ger@
-@U.verb.Im@
-@U.verb.Nmn@
-@U.verb.Perf@
+
+
+
+
 
 
 
@@ -71,18 +76,18 @@ LEXICON Number
 +Pl:oč	Definiteness ;
 
 LEXICON Gender
-+Msc:	Definiteness;
-+Fem:it	Definiteness;
++Msc:	Definiteness ;
++Fem:it	Definiteness ;
  
 LEXICON Definiteness
-+Def:u	Case;
-+InDef:	   #;
++Def:u	Case ;
++InDef:	   # ;
 
 LEXICON Case
-+Nom:	 #;
-+Acc:n	#;            !+Def is a prerequisite for +Acc(+InDef+Accis out)
++Nom:	 # ;
++Acc:n	# ;            !+Def is a prerequisite for +Acc(+InDef+Accis out)
 
-!there are few nouns which are inherently  gender assigned becasue of their near contact witht the language speaking community; since thier number is very limited I prefer to list them than to include in the derivation:
+!there are few nouns which are inherently  gender assigned becasue of their near contact witht the language speaking community ; since thier number is very limited I prefer to list them than to include in the derivation:
 ! +Msc : bäre,korma, bal , awra, kiräne
 !+Fem: lam, bazra, gidär, mist, k'eb
 
@@ -95,9 +100,9 @@ LEXICON Case
 
 
 LEXICON Verbs	
-	ImPerfc;	
-	Nominalizer;
-!	Causative;
+	ImPerfc ;	
+	Nominalizer ;
+	Causative ;
 		
 LEXICON ImPerfc    !the function of these prefixes is not clear yet
 < 0:y   "+3P+":0 "Sg+":0 "@U.verb.3msp@" >	Ca ;   
@@ -108,21 +113,19 @@ LEXICON ImPerfc    !the function of these prefixes is not clear yet
 < 0:X 0:n "+1P+":0         "@U.verb.1Pp@"  >	Ca ;
 
 LEXICON Ca
-@U.imp.Im@  Causativ ;  ! the causative caused the imperfect prefixes 
-              LBound;          ! to be optional which is bad
+@U.imp.Im@    Causativ ;  ! the causative caused the imperfect prefixes 
+              LBound ;          ! to be optional which is bad
 
 LEXICON Causativ !I add this lexicon to avoid the conflict of the prefixes and the causative
-Cau+:as       LBound;
+Cau+:as       LBound ;
 
 LEXICON Nominalizer
 +Nominal+@U.verb.Nmn@:mä@U.verb.Nmn@	Causative ;		
 	   
 
 LEXICON Causative   	    
-< a s "Cau+":0 "@U.imp.Cau@"  >   LBound ; ! Should not this have a tag???
-		                  LBound ;  
-   	                          LBoundf ;
-		                  LBoundf ;
+		                     LBound ;  
+		                     LBoundf ;
 		
 LEXICON LBoundf     !verbs with 4-consonant roots(f=four)
 [:^[{ Rootsf ;
@@ -135,13 +138,24 @@ LEXICON RightMerg
 -:}.m%>.{ Templatef ; 
 
 LEXICON Templatef
-CäCäCC@U.verb.Im@  	    RBoundf ;	 
-CäCäCäC@U.verb.Perf@	    RBoundf ;
-CäCCC@U.verb.Ger@	    RBoundf ; 
-CäCCäC@U.verb.Nmn@	    RBoundf ;
+CäCäCC  Im_Boundf ;
+CäCäCäC	Perf_Boundf ;
+CäCCC   Ger_Boundf ;
+CäCCäC	Nmn_Boundf ;
 
-LEXICON RBoundf 
-]:}^] 	All ;
+LEXICON  Im_Boundf
+]:}^] 	Imperfect ;
+
+LEXICON Perf_Boundf
+]:}^] 	Gersubject ;
+
+LEXICON   Ger_Boundf
+]:}^] 	Persubject ;
+
+LEXICON Nmn_Boundf
+]:}^] 	Infinitive ;
+
+
 				 				
 LEXICON LBound     !verbs with 3-consonant roots
 [:^[{ Roots ;
@@ -160,19 +174,25 @@ LEXICON MergeRight
 -:}.m%>.{ Template ; 
 
 LEXICON Template    ! Here we expect 3-letter roots
-!@U.imp.Im@:CCäC@U.imp.Im@ 	    RBound ;	
-!@U.verb.Perf@:CäCäC@U.verb.Perf@	RBound ;
-!@U.verb.Ger@:CäCC@U.verb.Ger@	RBound ; !the ä is an underlying form, i
-!@U.verb.Nmn@:CCäC@U.verb.Nmn@	RBound ;  !t appears as a when there is consonant deletion
-
-CäCC@U.imp.Im@ 	        RBound ;	
-CäCäC@U.verb.Perf@	RBound ;
-CäCC@U.verb.Ger@	RBound ; !the ä is an underlying form, i
-CCäC@U.verb.Nmn@	RBound ;     !t appears as a when there is consonant deletion
+CäCC 	Im_Bound ;	
+CäCäC	Perf_Bound ;
+CäCC	Ger_Bound ; !the ä is an underlying form, i
+CCäC    Nmn_Bound ;     !t appears as a when there is consonant deletion
 
 
-LEXICON RBound
-]:}^] 	All ;
+LEXICON  Im_Bound
+]:}^] 	Imperfect ;
+
+LEXICON Perf_Bound
+]:}^] 	Gersubject ;
+
+LEXICON   Ger_Bound
+]:}^] 	Persubject ;
+
+LEXICON Nmn_Bound
+]:}^] 	Infinitive ;
+
+
 
 LEXICON All
 	Imperfect  ;
@@ -207,7 +227,7 @@ LEXICON GSubject
 +1P+Sg:e	# ;
 
 LEXICON Persubject
-@U.verb.Perf@ PSubject;
+@U.verb.Perf@ PSubject ;
 
 LEXICON PSubject
 +3P+Msc+Sg:ä	# ;
