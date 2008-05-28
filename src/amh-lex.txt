@@ -5,12 +5,14 @@
 Multichar_Symbols 
 
 ^[ ^] 
-+Msc+ +Fem+ +Msc +Fem
+ +Msc +Fem
 +Perf    +Impf   +Ger +Inf Cau+
 +Nominal +Fut +Gen
-+1P +2P +3P +Sg +Pl 
-  +Sg     +Def  +InDef  +Nom +Acc
-
++1P+ +2P+ +3P+ +Sg+ +Pl+ 
+  +Sg +Pl    +Def  +InDef  +Nom +Acc
++3P
+Sg+ Pl+
++1P +2P +3P 
 
 
 @U.imp.Im@
@@ -25,17 +27,6 @@ Multichar_Symbols
 @U.verb.Nmn@
 @U.verb.Perf@
 
-
-@U.imp.Im@
-@U.verb.1Pp@
-@U.verb.1Psp@
-@U.verb.2Pp@
-@U.verb.3Pp@
-@U.verb.3fsp@
-@U.verb.3msp@
-@U.verb.Ger@
-@U.verb.Nmn@
-@U.verb.Perf@
 
 
 
@@ -76,19 +67,19 @@ LEXICON NDefiniteness
 !Post root morphology
 	 
 LEXICON Number
-+Sg:0	Gender ;
++Sg:	Gender ;
 +Pl:oč	Definiteness ;
 
 LEXICON Gender
-+Msc:0	Definiteness;
++Msc:	Definiteness;
 +Fem:it	Definiteness;
  
 LEXICON Definiteness
 +Def:u	Case;
-+InDef:0	   #;
++InDef:	   #;
 
 LEXICON Case
-+Nom:0	 #;
++Nom:	 #;
 +Acc:n	#;            !+Def is a prerequisite for +Acc(+InDef+Accis out)
 
 !there are few nouns which are inherently  gender assigned becasue of their near contact witht the language speaking community; since thier number is very limited I prefer to list them than to include in the derivation:
@@ -106,22 +97,22 @@ LEXICON Case
 LEXICON Verbs	
 	ImPerfc;	
 	Nominalizer;
-	Causative;
+!	Causative;
 		
 LEXICON ImPerfc    !the function of these prefixes is not clear yet
-< y  "+3P+":0 "Sg+":0 "Msc+":0 "@U.verb.3msp@" >	Ca;   
-< t  "+3P+":0 "Sg+":0 "Fem+":0 "@U.verb.3fsp@" >	Ca;
-< y  "+3P+":0 "Pl+":0          "@U.verb.3Pp@"  >	Ca;
-< t  "+2P+":0                  "@U.verb.2Pp@"  >	Ca;
-< X  "+1P+":0                  "@U.verb.1Psp@" >	Ca;  
-< X n "+1P+":0                  "@U.verb.1Pp@"  >	Ca;
+< 0:y   "+3P+":0 "Sg+":0 "@U.verb.3msp@" >	Ca ;   
+< 0:t   "+3P+":0 "Sg+":0 "@U.verb.3fsp@" >	Ca ;
+< 0:y   "+3P+":0 "Pl+":0 "@U.verb.3Pp@"  >	Ca ;
+< 0:t   "+2P+":0         "@U.verb.2Pp@"  >	Ca ;
+< 0:X   "+1P+":0         "@U.verb.1Psp@" >	Ca ;  
+< 0:X 0:n "+1P+":0         "@U.verb.1Pp@"  >	Ca ;
 
 LEXICON Ca
 @U.imp.Im@  Causativ ;  ! the causative caused the imperfect prefixes 
               LBound;          ! to be optional which is bad
 
 LEXICON Causativ !I add this lexicon to avoid the conflict of the prefixes and the causative
-as       LBound;
+Cau+:as       LBound;
 
 LEXICON Nominalizer
 +Nominal+@U.verb.Nmn@:mä@U.verb.Nmn@	Causative ;		
@@ -193,14 +184,14 @@ LEXICON Imperfect
 @U.imp.Im@     Impsubject ;
 
 LEXICON  Impsubject
-< a l u       "+1P":0                  "@U.verb.1Pp@"  > # ;
-< a l ä h u   "+1P":0 "+Sg":0          "@U.verb.1Psp@" > # ;
-< a l ä n     "+1P":0 "+Pl":0          "@U.verb.1Pp@"  > # ;
-< a l a č h u "+2P":0 "+Pl":0          "@U.verb.2Pp@"  > # ;
-< a l ä h     "+2P":0 "+Sg":0 "+Msc":0 "@U.verb.2Pp@"  > # ;	
-< a l ä š     "+2P":0 "+Sg":0 "+Fem":0 "@U.verb.2Pp@"  > # ;
-< a l         "+3P":0 "+Sg":0 "+Msc":0 "@U.verb.3msp@" > # ;   !problem
-< a l ä č     "+3P":0 "+Sg":0 "+Fem":0 "@U.verb.3fsp@" > # ;
+< 0:a 0:l 0:u       "+1P":0                  "@U.verb.1Pp@"  > # ;
+< 0:a 0:l 0:ä 0:h 0:u   "+1P":0 "+Sg":0          "@U.verb.1Psp@" > # ;
+< 0:a 0:l 0:ä 0:n     "+1P":0 "+Pl":0          "@U.verb.1Pp@"  > # ;
+< 0:a 0:l 0:a 0:č 0:h 0:u "+2P":0 "+Pl":0          "@U.verb.2Pp@"  > # ;
+< 0:a 0:l 0:ä 0:h     "+2P":0 "+Sg":0 "+Msc":0 "@U.verb.2Pp@"  > # ;	
+< 0:a 0:l 0:ä 0:š     "+2P":0 "+Sg":0 "+Fem":0 "@U.verb.2Pp@"  > # ;
+< 0:a 0:l         "+3P":0 "+Sg":0 "+Msc":0 "@U.verb.3msp@" > # ;   !problem
+< 0:a 0:l 0:ä 0:č     "+3P":0 "+Sg":0 "+Fem":0 "@U.verb.3fsp@" > # ;
  
 
 LEXICON Gersubject
@@ -213,7 +204,7 @@ LEXICON GSubject
 +2P+Msc+Sg:äh   # ;
 +2P+Fem+Sg:äš	# ;
 +2P+Pl:ačhu	# ;	!there might be a phonological process here, dialects
-+1P+Sg:e	    # ;
++1P+Sg:e	# ;
 
 LEXICON Persubject
 @U.verb.Perf@ PSubject;
@@ -221,14 +212,14 @@ LEXICON Persubject
 LEXICON PSubject
 +3P+Msc+Sg:ä	# ;
 +3P+Fem+Sg:äč	# ;
-+3P+Pl:u	    # ;
++3P+Pl:u	# ;
 +2P+Msc+Sg:h	# ;	! h alternates with k
 +2P+Fem+Sg:š	# ;
 +2P+Pl:ačhu	# ;
-+1P+Sg:hu	    # ;	!hu alternates with ku
++1P+Sg:hu	# ;	!hu alternates with ku
 
 LEXICON Infinitive
-+Nominal:0       # ; 	
++Nominal:       # ; 	
 
 !I have three main problems now(resulting in an unexpected large number of output.)
 !1. Underlying forms are exploding in the output,in all the forms,  which is bad       ?????
