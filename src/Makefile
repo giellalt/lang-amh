@@ -1,9 +1,14 @@
 
 
 ifeq (victorio.uit.no, $(shell hostname))
-XFST = /usr/local/bin/xfst 
-LEXC = /usr/local/bin/lexc 
+XFST = ~/bin/xfst 
+LEXC = ~/bin/lexc 
 endif
+
+#ifeq (victorio.uit.no, $(shell hostname))
+#XFST = /usr/local/bin/xfst 
+#LEXC = /usr/local/bin/lexc 
+#endif
 
 
 XFST = xfst -utf8
