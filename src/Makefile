@@ -11,8 +11,8 @@ endif
 #endif
 
 
-XFST = xfst -utf8
-LEXC = lexc -utf8
+XFST = xfst #-utf8
+LEXC = lexc #-utf8
 
 # Source files
 
