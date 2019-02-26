@@ -65,5 +65,5 @@ Sg+ Pl+
 LEXICON Root
 	Nominals ;
 	Verbs ;
-	
-	
+    Punctuation ;
+    Symbols     ;
