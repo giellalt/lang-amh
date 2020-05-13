@@ -1,0 +1,35 @@
+[package]
+name = "amh"
+human_name = "Amharic"
+version = "0.1.0"
+
+# Table of speller tag -> filename to include in the bundle
+# filenames depends on specific project
+[spellers.amh]
+filename = "am-mobile.zhfst"
+
+# Table of bundles to generated
+# key is the type of bundle
+# Windows speller bundle require a uuid for the installer
+[bundles.speller_win]
+package = "speller-amh"
+platform = "windows"
+uuid = "EE4FC84D-EDAC-499F-A24B-9DF157796AF9"
+repo = "https://pahkat.uit.no/main/"
+
+[bundles.speller_macos]
+pkg_id = "no.divvun.MacDivvun.am"
+package = "speller-amh"
+platform = "macos"
+repo = "https://pahkat.uit.no/main/"
+
+[bundles.speller_win_mso]
+package = "speller-amh-mso"
+platform = "windows"
+uuid = "6BD6BC85-AC5B-4AC1-BFA0-48DC1D68A1F5"
+repo = "https://pahkat.uit.no/main/"
+
+[bundles.speller_mobile]
+package = "speller-amh"
+platform = "mobile"
+repo = "https://pahkat.uit.no/main/"
