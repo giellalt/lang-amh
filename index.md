@@ -1,7 +1,7 @@
 # Amharic documentation
 
 [![Maturity: Experiment](https://img.shields.io/badge/Maturity-Experiment-black.svg)](https://giellalt.github.io/MaturityClassification.html)
-[![License](https://img.shields.io/github/license/giellalt/lang-amh)](https://raw.githubusercontent.com/giellalt/lang-amh/develop/LICENSE)
+[![License](https://img.shields.io/github/license/giellalt/lang-amh)](https://raw.githubusercontent.com/giellalt/lang-amh/main/LICENSE)
 [![Issues](https://img.shields.io/github/issues/giellalt/lang-amh)](https://github.com/giellalt/lang-amh/issues)
 [![Build status](https://github.com/giellalt/lang-amh/workflows/Speller%20CI+CD/badge.svg)](https://github.com/giellalt/lang-amh/actions)
 
