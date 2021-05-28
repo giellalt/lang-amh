@@ -3,13 +3,13 @@ The Amharic morphology and tools
 
 [![GitHub issues](https://img.shields.io/github/issues-raw/giellalt/lang-amh)](https://github.com/giellalt/lang-amh/issues)
 [![Build Status](https://github.com/giellalt/lang-amh/workflows/Speller%20CI+CD/badge.svg)](https://github.com/giellalt/lang-amh/actions)
-[![License](https://img.shields.io/github/license/giellalt/lang-amh)](https://raw.githubusercontent.com/giellalt/lang-amh/develop/LICENSE)
+[![License](https://img.shields.io/github/license/giellalt/lang-amh)](https://raw.githubusercontent.com/giellalt/lang-amh/main/LICENSE)
 
 This repository contains finite state source files for the Amharic language,
 for building morphological analysers, proofing tools
 and dictionaries. The data and implementation are licenced under __LICENCE__
 licence, also detailed in the
-[LICENCE](https://github.com/giellalt/lang-amh/blob/develop/LICENCE). The
+[LICENSE](https://github.com/giellalt/lang-amh/blob/main/LICENSE). The
 authors named in the AUTHORS file are available to grant other licencing
 choices.
 
@@ -77,7 +77,7 @@ svn checkout https://github.com/giellalt/lang-amh.git/trunk lang-amh
 Building and installation
 -------------------------
 
-[INSTALL](https://github.com/giellalt/lang-amh/blob/develop/INSTALL)
+[INSTALL](https://github.com/giellalt/lang-amh/blob/main/INSTALL)
 describes the GNU build system in detail, but for most users it is the usual:
 
 ```sh
