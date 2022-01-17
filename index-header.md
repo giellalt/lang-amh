@@ -6,6 +6,8 @@
 [![Build status](https://github.com/giellalt/lang-amh/workflows/Speller%20CI+CD/badge.svg)](https://github.com/giellalt/lang-amh/actions)
 
 This page documents the work on the [Amharic language model](https://github.com/giellalt/lang-amh). 
+It is a setup of an analyser for Amharic.
+It only contains a handful of words.
 
 # Project documentation
 
