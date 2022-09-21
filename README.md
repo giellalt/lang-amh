@@ -30,7 +30,7 @@ Documentation
 
 Documentation can be found at:
 
--   <https://giellalt.uit.no/lang/amhdoc/index.html>
+- [Language specific documentation](https://giellalt.github.io/lang-amh/)
 -   <https://giellalt.uit.no/index.html>
 
 Core dependencies
