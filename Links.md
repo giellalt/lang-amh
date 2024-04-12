@@ -4,6 +4,7 @@
     * `fst/`
         * `morphology/`
             * `affixes/`
+                * [symbols.lexc](src-fst-morphology-affixes-symbols.lexc.html) ([src](https://github.com/giellalt/lang-amh/blob/main/src/fst/morphology/affixes/symbols.lexc))
             * [root.lexc](src-fst-morphology-root.lexc.html) ([src](https://github.com/giellalt/lang-amh/blob/main/src/fst/morphology/root.lexc))
         * `phonetics/`
             * [txt2ipa.xfscript](src-fst-phonetics-txt2ipa.xfscript.html) ([src](https://github.com/giellalt/lang-amh/blob/main/src/fst/phonetics/txt2ipa.xfscript))
@@ -13,7 +14,6 @@
 * `tools/`
     * `grammarcheckers/`
         * [grammarchecker.cg3](tools-grammarcheckers-grammarchecker.cg3.html) ([src](https://github.com/giellalt/lang-amh/blob/main/tools/grammarcheckers/grammarchecker.cg3))
-            * `/`
     * `tokenisers/`
         * [tokeniser-disamb-gt-desc.pmscript](tools-tokenisers-tokeniser-disamb-gt-desc.pmscript.html) ([src](https://github.com/giellalt/lang-amh/blob/main/tools/tokenisers/tokeniser-disamb-gt-desc.pmscript))
         * [tokeniser-gramcheck-gt-desc.pmscript](tools-tokenisers-tokeniser-gramcheck-gt-desc.pmscript.html) ([src](https://github.com/giellalt/lang-amh/blob/main/tools/tokenisers/tokeniser-gramcheck-gt-desc.pmscript))
