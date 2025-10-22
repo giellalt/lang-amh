@@ -5,7 +5,6 @@
 [![License](https://img.shields.io/github/license/giellalt/lang-amh)](https://github.com/giellalt/lang-amh/blob/main/LICENSE)
 [![Issues](https://img.shields.io/github/issues/giellalt/lang-amh)](https://github.com/giellalt/lang-amh/issues)
 [![Build Status](https://builds.giellalt.org/api/badge/lang-amh?label=CI)](https://builds.giellalt.org/pipelines/lang-amh/builds/latest)
-[![Glottolog](https://img.shields.io/badge/Glottolog-green)](https://glottolog.org/resource/languoid/id/__GLOTTOLOG_ID__)
 
 This page documents the work on the [Amharic language model](https://github.com/giellalt/lang-amh). 
 It is a setup of an analyser for Amharic.
